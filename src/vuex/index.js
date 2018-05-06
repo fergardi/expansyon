@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const vuex = new Vuex.Store({
   state: {
     lang: 'es',
-    title: 'ttl_galaxy'
+    title: 'ttl_route_empire'
   },
   mutations: {
     title (state, title) {

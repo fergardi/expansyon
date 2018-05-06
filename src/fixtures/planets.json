@@ -1,39 +1,57 @@
 {
-  "planets": {
-    "dsadsa": {
-      "globe": "https://image.flaticon.com/icons/svg/139/139706.svg",
-      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
-      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
-      "name": "planeta",
-      "color": "pink"
-    },
-    "dsadsaadsa": {
-      "globe": "https://image.flaticon.com/icons/svg/124/124582.svg",
-      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
-      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
-      "name": "planeta",
-      "color": "green"
-    },
-    "dsadsdsadsa": {
-      "globe": "https://image.flaticon.com/icons/svg/124/124558.svg",
-      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
-      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
-      "name": "planeta",
-      "color": "red"
-    },
-    "dsadsadsa": {
-      "globe": "https://image.flaticon.com/icons/svg/139/139730.svg",
-      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
-      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
-      "name": "planeta",
-      "color": "red"
-    },
-    "dsadsadsadsa": {
-      "globe": "https://image.flaticon.com/icons/svg/139/139728.svg",
-      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
-      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
-      "name": "planeta",
-      "color": "red"
-    }
+  "dsadsa" : {
+    "globe" : "https://image.flaticon.com/icons/svg/139/139706.svg",
+    "gold" : 50,
+    "influence" : 70,
+    "mana" : 20,
+    "moon" : true,
+    "name" : "planeta",
+    "people" : 30,
+    "satellite" : false,
+    "size" : 10
+  },
+  "dsadsaadsa" : {
+    "globe" : "https://image.flaticon.com/icons/svg/124/124582.svg",
+    "gold" : 50,
+    "influence" : 30,
+    "mana" : 20,
+    "moon" : true,
+    "name" : "planeta",
+    "people" : 30,
+    "satellite" : false,
+    "size" : 20
+  },
+  "dsadsadsa" : {
+    "globe" : "https://image.flaticon.com/icons/svg/139/139730.svg",
+    "gold" : 30,
+    "influence" : 70,
+    "mana" : 90,
+    "moon" : true,
+    "name" : "planeta",
+    "people" : 20,
+    "satellite" : false,
+    "size" : 90
+  },
+  "dsadsadsadsa" : {
+    "globe" : "https://image.flaticon.com/icons/svg/139/139728.svg",
+    "gold" : 50,
+    "influence" : 70,
+    "mana" : 20,
+    "moon" : true,
+    "name" : "planeta",
+    "people" : 30,
+    "satellite" : false,
+    "size" : 90
+  },
+  "dsadsdsadsa" : {
+    "globe" : "https://image.flaticon.com/icons/svg/124/124558.svg",
+    "gold" : 100,
+    "influence" : 70,
+    "mana" : 20,
+    "moon" : true,
+    "name" : "planeta",
+    "people" : 30,
+    "satellite" : false,
+    "size" : 90
   }
 }

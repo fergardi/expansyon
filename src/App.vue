@@ -7,9 +7,19 @@
         vc-button(icon-button, color="transparent")
           vc-icon fa-home
     vc-nav-drawer#sidebar(v-model="sidebar", :temporary="true", :dark="false")
-      p hola
+      vc-collapsible(name="economy", color="pink", :multiple="true")
+        vc-collapsible-item(label="lbl_menu_economy", has-vc-list, icon="home", open)
+          vc-list
+            vc-list-item(avatar="panorama_wide_angle", icon="chevron_right", tag="router-link", to="/empire")
+              vc-list-item-primary-text ttl_route_empire
+              vc-list-item-secondary-text stt_route_empire
+            vc-list-item(avatar="panorama_wide_angle", icon="chevron_right", tag="router-link", to="/galaxy")
+              vc-list-item-primary-text ttl_route_galaxy
+              vc-list-item-secondary-text stt_route_galaxy
     #content
       router-view
+    #notifications
+      
 </template>
 
 <script>
