@@ -1,12 +1,16 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueFire from 'vuefire'
+import Vuecidity from 'vuecidity'
+import '../node_modules/vuecidity/dist/lib/vuecidity.min.css'
 
-Vue.config.productionTip = false
+// uses
+Vue.use(Vuecidity)
+Vue.use(VueFire)
 
 /* eslint-disable no-new */
+Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,

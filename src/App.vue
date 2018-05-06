@@ -1,54 +1,36 @@
-<template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
-  </div>
+<template lang="pug">
+  #app
+    vc-toolbar#topbar(color="pink")
+      vc-toolbar-icon-left(icon="menu", @click="sidebar = !sidebar")
+        vc-toolbar-title
+          span App
+        vc-toolbar-controls-right
+          vc-button(icon-button, color="transparent")
+            vc-icon fa-home
+    vc-nav-drawer#sidebar(v-model="sidebar", :temporary="true", :dark="false")
+      p hola
+    #content
+      router-view
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      sidebar: false
+    }
+  }
 }
 </script>
 
-<style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
+<style lang="stylus">
+  html
+  body
+  #app
+    width 100vw
+    height 100vh
+    #content
+      width 100%
+      height 100%
 </style>
