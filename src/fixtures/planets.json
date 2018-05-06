@@ -1,0 +1,39 @@
+{
+  "planets": {
+    "dsadsa": {
+      "globe": "https://image.flaticon.com/icons/svg/139/139706.svg",
+      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
+      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
+      "name": "planeta",
+      "color": "pink"
+    },
+    "dsadsaadsa": {
+      "globe": "https://image.flaticon.com/icons/svg/124/124582.svg",
+      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
+      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
+      "name": "planeta",
+      "color": "green"
+    },
+    "dsadsdsadsa": {
+      "globe": "https://image.flaticon.com/icons/svg/124/124558.svg",
+      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
+      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
+      "name": "planeta",
+      "color": "red"
+    },
+    "dsadsadsa": {
+      "globe": "https://image.flaticon.com/icons/svg/139/139730.svg",
+      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
+      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
+      "name": "planeta",
+      "color": "red"
+    },
+    "dsadsadsadsa": {
+      "globe": "https://image.flaticon.com/icons/svg/139/139728.svg",
+      "moon": "https://image.flaticon.com/icons/svg/616/616465.svg",
+      "satellite": "https://image.flaticon.com/icons/svg/179/179527.svg",
+      "name": "planeta",
+      "color": "red"
+    }
+  }
+}

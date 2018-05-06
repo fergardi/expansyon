@@ -3,7 +3,7 @@ require('firebase/auth')
 require('firebase/database')
 // require('firebase/messaging')
 
-const identifier = 'wyzard-14537'
+const identifier = 'expansyon-7c4fc'
 
 const config = {
   apiKey: 'AIzaSyATkJEmUyFcvAVUiSIPBaiTmrmyqQlep-w',
