@@ -1,21 +1,20 @@
 <template lang="pug">
-  vc-card.planet
-    vc-card-title(:color="color(planet)")
-      h3.headline.ma-0.pa-0.ellipsis.align-center.font-white {{ planet.name }}
-    vc-card-text.space
+  vs-card.planet(:vs-color="color")
+    vs-card-header(:vs-background-color="color", :vs-title="name()", :vs-fill="true")
+    vs-card-body.space
       .globe(v-tooltip="{text: 'ttp_planet_globe'}")
-        img(:src="planet.globe")
-      .orbit
-        .moon(v-tooltip="{text: 'ttp_planet_moon'}")
-          img(src="https://image.flaticon.com/icons/svg/616/616465.svg", :style="planet.moon ? 'enabled' : ''")
-        .satellite(v-tooltip="{text: 'ttp_planet_satellite'}")
-          img(src="https://image.flaticon.com/icons/svg/179/179527.svg", :style="planet.satellite ? 'enabled' : ''")
-    vc-card-text.stats
-      vc-progress(name="mana", :fill="planet.mana", progress-color="blue", track-color="blue l-100", v-tooltip="{text: 'ttp_resource_mana'}")
-      vc-progress(name="gold", :fill="planet.gold", progress-color="yellow", track-color="yellow l-100", v-tooltip="{text: 'ttp_resource_gold'}")
-      vc-progress(name="people", :fill="planet.people", progress-color="purple", track-color="purple l-100", v-tooltip="{text: 'ttp_resource_people'}")
-      vc-progress(name="size", :fill="planet.size", progress-color="green", track-color="green l-100", v-tooltip="{text: 'ttp_resource_space'}")
-      vc-progress(name="influence", :fill="planet.influence", progress-color="red", track-color="red l-100", v-tooltip="{text: 'ttp_resource_influence'}")
+        img(:src="'/static/img/planets/' + planet.globe")
+      .orbit(v-if="planet.moon || planet.satellite")
+        .moon(v-tooltip="{text: 'ttp_planet_moon'}", v-show="planet.moon")
+          img(src="/static/img/planets/moon.png")
+        .satellite(v-tooltip="{text: 'ttp_planet_satellite'}", v-show="planet.satellite")
+          img(src="/static/img/planets/vortex.png")
+    vs-card-body.stats
+      vs-progress(:vs-percent="planet.mana", vs-color="primary", v-tooltip="{text: 'ttp_resource_mana'}")
+      vs-progress(:vs-percent="planet.gold", vs-color="warning", v-tooltip="{text: 'ttp_resource_gold'}")
+      vs-progress(:vs-percent="planet.people", vs-color="dark", v-tooltip="{text: 'ttp_resource_people'}")
+      vs-progress(:vs-percent="planet.size", vs-color="success", v-tooltip="{text: 'ttp_resource_space'}")
+      vs-progress(:vs-percent="planet.influence", vs-color="danger", v-tooltip="{text: 'ttp_resource_influence'}")
 </template>
 
 <script>
@@ -23,18 +22,26 @@ export default {
   name: 'planet',
   props: ['planet'],
   methods: {
-    color (planet) {
-      switch (Math.max(planet.mana, planet.gold, planet.people, planet.size, planet.influence)) {
-        case planet.mana:
-          return 'blue'
-        case planet.gold:
-          return 'yellow'
-        case planet.people:
-          return 'purple'
-        case planet.size:
-          return 'green'
-        case planet.influence:
-          return 'red'
+    name () {
+      return this.str(6) + '_' + this.str(2) + '/' + this.str(2)
+    },
+    str (number) {
+      return (Math.random() + 1).toString(36).substring(2, number + 2).toUpperCase()
+    }
+  },
+  computed: {
+    color () {
+      switch (Math.max(this.planet.mana, this.planet.gold, this.planet.people, this.planet.size, this.planet.influence)) {
+        case this.planet.mana:
+          return 'primary'
+        case this.planet.gold:
+          return 'warning'
+        case this.planet.people:
+          return 'dark'
+        case this.planet.size:
+          return 'success'
+        case this.planet.influence:
+          return 'danger'
       }
     }
   }
@@ -43,6 +50,11 @@ export default {
 
 <style lang="stylus" scoped>
   .planet
+    background-color rgba(0,0,0,0.85)
+    // background-image url('https://spaceplace.nasa.gov/review/interstellar/cover.sp.png')
+    background-repeat no-repeat
+    background-size cover
+    background-position center
     &:hover
       cursor pointer
     .space
@@ -53,21 +65,19 @@ export default {
       height 100%
       .globe
       .orbit
-        width 50%
+        width 100%
         height 100%
-      .globe
-        img
-          height 150px
-      .orbit
         display flex
         flex-direction column
         justity-content center
         align-items center
+      .globe
+        img
+          height 150px
+          width auto
+      .orbit
         img
           height 75px
+          width auto
           padding 5px
-          opacity 0.25
-    .stats
-      .vc-progress
-        padding 5px 0
 </style>

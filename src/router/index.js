@@ -6,9 +6,13 @@ Vue.use(Router)
 
 let router = new Router({
   routes: [
-    { path: '/', redirect: '/empire' },
+    { path: '/', redirect: '/galaxy' },
     { path: '/galaxy', name: 'ttl_route_galaxy', component: () => import('@/views/galaxy') },
-    { path: '/empire', name: 'ttl_route_empire', component: () => import('@/views/empire') }
+    { path: '/cosmos', name: 'ttl_route_cosmos', component: () => import('@/views/cosmos') },
+    { path: '/empire', name: 'ttl_route_empire', component: () => import('@/views/empire') },
+    { path: '/infrastructure', name: 'ttl_route_infrastructure', component: () => import('@/views/infrastructure') },
+    { path: '/bestiary', name: 'ttl_route_bestiary', component: () => import('@/views/bestiary') },
+    { path: '*', redirect: '/' }
   ]
 })
 
