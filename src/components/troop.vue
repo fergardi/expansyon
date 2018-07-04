@@ -67,7 +67,7 @@ export default {
 <style lang="stylus" scoped>
   .troop
     background-color rgba(0,0,0,0.75)
-    background-image url('http://images.all-free-download.com/images/graphiclarge/old_paper_background_hd_picture_2_169574.jpg')
+    // background-image url('https://images.fineartamerica.com/images-medium-large-5/old-map-of-europe-and-mediterranean-colin-and-linda-mckie.jpg')
     background-repeat no-repeat
     background-size cover
     background-position center

@@ -2,19 +2,22 @@
   vs-card.planet(:vs-color="color")
     vs-card-header(:vs-background-color="color", :vs-title="name()", :vs-fill="true")
     vs-card-body.space
-      .globe(v-tooltip="{text: 'ttp_planet_globe'}")
-        img(:src="'/static/img/planets/' + planet.globe")
+      .globe(v-tooltip="{ text: 'ttp_planet_globe' }")
+        // (:src="'/static/img/planets/' + planet.globe")
+        img(:src="planet.globe")
       .orbit(v-if="planet.moon || planet.satellite")
-        .moon(v-tooltip="{text: 'ttp_planet_moon'}", v-show="planet.moon")
-          img(src="/static/img/planets/moon.png")
-        .satellite(v-tooltip="{text: 'ttp_planet_satellite'}", v-show="planet.satellite")
-          img(src="/static/img/planets/vortex.png")
+        .moon(v-tooltip="{ text: 'ttp_planet_moon' }", v-show="planet.moon")
+          // (src="/static/img/planets/moon.png")
+          img(src="https://image.flaticon.com/icons/svg/578/578324.svg")
+        .satellite(v-tooltip="{ text: 'ttp_planet_satellite' }", v-show="planet.satellite")
+          // (src="/static/img/planets/vortex.png")
+          img(src="https://image.flaticon.com/icons/svg/433/433942.svg")
     vs-card-body.stats
-      vs-progress(:vs-percent="planet.mana", vs-color="primary", v-tooltip="{text: 'ttp_resource_mana'}")
-      vs-progress(:vs-percent="planet.gold", vs-color="warning", v-tooltip="{text: 'ttp_resource_gold'}")
-      vs-progress(:vs-percent="planet.people", vs-color="dark", v-tooltip="{text: 'ttp_resource_people'}")
-      vs-progress(:vs-percent="planet.size", vs-color="success", v-tooltip="{text: 'ttp_resource_space'}")
-      vs-progress(:vs-percent="planet.influence", vs-color="danger", v-tooltip="{text: 'ttp_resource_influence'}")
+      vs-progress(:vs-percent="planet.mana", vs-color="primary", v-tooltip="{ text: 'ttp_resource_mana' }")
+      vs-progress(:vs-percent="planet.gold", vs-color="warning", v-tooltip="{ text: 'ttp_resource_gold' }")
+      vs-progress(:vs-percent="planet.people", vs-color="dark", v-tooltip="{ text: 'ttp_resource_people' }")
+      vs-progress(:vs-percent="planet.size", vs-color="success", v-tooltip="{ text: 'ttp_resource_space' }")
+      vs-progress(:vs-percent="planet.influence", vs-color="danger", v-tooltip="{ text: 'ttp_resource_influence' }")
 </template>
 
 <script>

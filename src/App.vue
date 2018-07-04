@@ -5,9 +5,12 @@
       h3 {{ title }}
       vs-button(vs-color="primary", vs-color-text="white", vs-type="flat", vs-icon="menu")
     vs-sidebar(:vs-active.sync="sidebar")
-      vs-divider(vs-color="primary") Hola
+      vs-divider(vs-color="primary", vs-icon="star")
       vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") lbl_menu_galaxy
+      vs-divider(vs-color="primary", vs-icon="star")
       vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") lbl_menu_bestiary
+      vs-divider(vs-color="primary", vs-icon="star")
+      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") lbl_menu_tree
     #content
       router-view
 </template>
@@ -19,7 +22,7 @@ export default {
   name: 'app',
   data () {
     return {
-      sidebar: true
+      sidebar: false
     }
   },
   methods: {

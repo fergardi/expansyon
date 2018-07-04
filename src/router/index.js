@@ -12,6 +12,7 @@ let router = new Router({
     { path: '/empire', name: 'ttl_route_empire', component: () => import('@/views/empire') },
     { path: '/infrastructure', name: 'ttl_route_infrastructure', component: () => import('@/views/infrastructure') },
     { path: '/bestiary', name: 'ttl_route_bestiary', component: () => import('@/views/bestiary') },
+    { path: '/tree', name: 'ttl_route_tree', component: () => import('@/views/tree') },
     { path: '*', redirect: '/' }
   ]
 })

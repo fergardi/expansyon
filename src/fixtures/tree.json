@@ -1,0 +1,74 @@
+{
+  "branch1" : {
+    "color" : "success",
+    "order" : 1,
+    "skills" : {
+      "skill1" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      },
+      "skill2" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      },
+      "skill3" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      }
+    }
+  },
+  "branch2" : {
+    "color" : "primary",
+    "order" : 2,
+    "skills" : {
+      "skill1" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      },
+      "skill2" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      },
+      "skill3" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      }
+    }
+  },
+  "branch3" : {
+    "color" : "danger",
+    "order" : 3,
+    "skills" : {
+      "skill1" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      },
+      "skill2" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      },
+      "skill3" : {
+        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
+        "level" : 1,
+        "name" : "nombre",
+        "tooltip" : "ttp_skill_name"
+      }
+    }
+  }
+}

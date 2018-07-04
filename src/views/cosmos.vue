@@ -23,6 +23,6 @@ export default {
 
 <style lang="stylus" scoped>
   #galaxy
-    margin 5px
+    padding 5px
     height 100%
 </style>

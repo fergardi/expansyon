@@ -13,12 +13,18 @@ export default {
   components: { Troop },
   firebase: {
     troops: database.ref('troops')
+  },
+  created () {
+    this.$vs.loading({ background: '#000' })
+  },
+  updated () {
+    try { this.$vs.loading.close() } catch (error) {} // fixes null node
   }
 }
 </script>
 
 <style lang="stylus" scoped>
   #bestiary
-    margin 5px
+    padding 5px
     height 100%
 </style>

@@ -4,7 +4,10 @@
       slide.slide(v-for="(planet, index) in planets", :key="index", :index="index")
         planet(:planet="planet")
     .actions
-      vs-button(vs-color="primary") lbl_button_attack
+      vs-button(vs-color="primary", @click="dialog = true") lbl_button_attack
+    
+    vs-dialog(vs-color="danger", vs-title="ttl_dialog_attack", @vs-accept="attack", :vs-active.sync="dialog")
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </template>
 
 <script>
@@ -17,16 +20,32 @@ export default {
   firebase: {
     planets: database.ref('planets')
   },
+  data () {
+    return {
+      dialog: false
+    }
+  },
   created () {
     this.$vs.loading({ background: '#000' })
   },
   updated () {
     this.$refs.constellation && this.$refs.constellation.goSlide(this.$refs.constellation.currentIndex) // fixes invisible slide bug
-    this.$vs.loading.close()
+    try { this.$vs.loading.close() } catch (error) {} // fixes null node
   },
   computed: {
     planet () {
       return this.$refs.constellation && this.planets ? this.planets[this.$refs.constellation.currentIndex] : null
+    }
+  },
+  methods: {
+    attack () {
+      this.$vs.notify({
+        position: 'top-right',
+        title: 'Titulo',
+        text: 'Lorem ipsum dolor sit amet, consectetur',
+        color: 'primary'
+      })
+      this.dialog = false
     }
   }
 }
@@ -41,10 +60,10 @@ export default {
     flex-direction column
     .constellation
       margin 0 auto !important
-      height 50%
+      height 60%
     .actions
       display flex
       justify-content center
       align-items center
-      height 50%
+      height 40%
 </style>

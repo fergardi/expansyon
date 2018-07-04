@@ -15,7 +15,7 @@ export default {
 
 <style lang="stylus" scoped>
   #infrastructure
-    margin 5px
+    padding 5px
     height 100%
     .vs-row
       display flex
