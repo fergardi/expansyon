@@ -1,16 +1,17 @@
 <template lang="pug">
   #app
     vs-topbar(vs-color="primary")
-      vs-button(vs-color="primary", vs-color-text="white", vs-type="flat", vs-icon="menu", @click="sidebar = !sidebar")
-      h3 {{ title }}
-      vs-button(vs-color="primary", vs-color-text="white", vs-type="flat", vs-icon="menu")
+      vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="menu", @click="sidebar = !sidebar")
+      h2 {{ title }}
+      vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings")
     vs-sidebar(:vs-active.sync="sidebar")
       vs-divider(vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") lbl_menu_galaxy
+      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") ttl_menu_galaxy
+      vs-sidebar-item(@click.native="close", to="infrastructure", :vs-active="active('infrastructure')", vs-icon="question_answer") ttl_menu_infrastructure
       vs-divider(vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") lbl_menu_bestiary
+      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") ttl_menu_bestiary
       vs-divider(vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") lbl_menu_tree
+      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") ttl_menu_tree
     #content
       router-view
 </template>
@@ -42,6 +43,9 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import url('https://fonts.googleapis.com/css?family=Wendy+One')
+  *
+    font-family 'Wendy One', sans-serif
   html
   body
   #app
@@ -65,4 +69,14 @@ export default {
     .vs-topbar
       min-height 50px
       justify-content space-between !important
+      .vs-button
+        font-size 1.5rem
+        i
+          color rgba(255,255,255,0.8)
+    .vs-button
+      font-size 1.2rem
+    .con-input-number
+      button
+        i
+          font-size 1.2rem !important
 </style>

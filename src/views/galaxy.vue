@@ -4,9 +4,9 @@
       slide.slide(v-for="(planet, index) in planets", :key="index", :index="index")
         planet(:planet="planet")
     .actions
-      vs-button(vs-color="primary", @click="dialog = true") lbl_button_attack
-    
-    vs-dialog(vs-color="danger", vs-title="ttl_dialog_attack", @vs-accept="attack", :vs-active.sync="dialog")
+      vs-button(vs-type="relief", vs-color="primary", vs-icon="check", @click="dialog = true") lbl_button_attack
+    // dialog
+    vs-dialog(vs-color="danger", vs-title="ttl_dialog_attack", vs-type="confirm", @vs-accept="attack", :vs-active.sync="dialog")
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </template>
 
@@ -43,7 +43,8 @@ export default {
         position: 'top-right',
         title: 'Titulo',
         text: 'Lorem ipsum dolor sit amet, consectetur',
-        color: 'primary'
+        color: 'primary',
+        icon: 'info'
       })
       this.dialog = false
     }
