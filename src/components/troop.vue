@@ -37,7 +37,7 @@ export default {
         case 'fire':
           return 'https://image.flaticon.com/icons/svg/599/599502.svg'
         case 'water':
-          return 'https://image.flaticon.com/icons/svg/414/414974.svg'
+          return 'https://image.flaticon.com/icons/svg/653/653434.svg'
         case 'lightning':
           return 'https://image.flaticon.com/icons/svg/488/488586.svg'
         case 'holy':

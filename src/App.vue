@@ -2,18 +2,19 @@
   #app
     vs-topbar(vs-color="primary")
       vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="menu", @click="sidebar = !sidebar")
-      h2 {{ title }}
-      vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings")
+      h2 {{ $t(title) }}
+      vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings", @click="login")
     vs-sidebar(:vs-active.sync="sidebar")
-      vs-divider(vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") ttl_menu_galaxy
-      vs-sidebar-item(@click.native="close", to="infrastructure", :vs-active="active('infrastructure')", vs-icon="question_answer") ttl_menu_infrastructure
-      vs-divider(vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") ttl_menu_bestiary
-      vs-divider(vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") ttl_menu_tree
+      vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
+      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") {{ $t('ttl_menu_galaxy') }}
+      vs-sidebar-item(@click.native="close", to="infrastructure", :vs-active="active('infrastructure')", vs-icon="question_answer") {{ $t('ttl_menu_infrastructure') }}
+      vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
+      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") {{ $t('ttl_menu_bestiary') }}
+      vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
+      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") {{ $t('ttl_menu_tree') }}
     #content
-      router-view
+      transition(name="fade")
+        router-view
 </template>
 
 <script>
@@ -32,6 +33,9 @@ export default {
     },
     close () {
       this.sidebar = false
+    },
+    login () {
+      this.$router.push('/login')
     }
   },
   computed: {
@@ -79,4 +83,13 @@ export default {
       button
         i
           font-size 1.2rem !important
+    .fade-enter-active
+    .fade-leave-active
+      transition-property opacity
+      transition-duration .25s
+    .fade-enter-active
+      transition-delay .25s
+    .fade-enter
+    .fade-leave-active
+      opacity 0
 </style>

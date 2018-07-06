@@ -22,11 +22,22 @@ Vue.use(Vuesax, {
 Vue.use(VueI18n)
 Vue.use(VueFire)
 
+const messages = {
+  es: require('@/lang/es.json'),
+  en: require('@/lang/en.json')
+}
+
+const i18n = new VueI18n({
+  locale: 'es',
+  messages
+})
+
 /* eslint-disable no-new */
 Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  i18n
 })

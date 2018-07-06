@@ -7,6 +7,7 @@ Vue.use(Router)
 let router = new Router({
   routes: [
     { path: '/', redirect: '/galaxy' },
+    { path: '/login', name: 'ttl_route_login', component: () => import('@/views/login') },
     { path: '/galaxy', name: 'ttl_route_galaxy', component: () => import('@/views/galaxy') },
     { path: '/cosmos', name: 'ttl_route_cosmos', component: () => import('@/views/cosmos') },
     { path: '/empire', name: 'ttl_route_empire', component: () => import('@/views/empire') },
