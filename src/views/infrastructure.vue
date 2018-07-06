@@ -7,8 +7,8 @@
         .button
           vs-input-number(:vs-color="building.color", vs-min="0", vs-max="10", vs-size="medium", v-model="building.quantity")
     vs-row.actions
-      vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") lbl_button_save
-      vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") lbl_button_reset
+      vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
+      vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
     // save
     vs-dialog(vs-color="success", vs-title="ttl_dialog_confirm", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

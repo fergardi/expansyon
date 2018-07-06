@@ -6,12 +6,12 @@
       vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings", @click="login")
     vs-sidebar(:vs-active.sync="sidebar")
       vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") {{ $t('ttl_menu_galaxy') }}
-      vs-sidebar-item(@click.native="close", to="infrastructure", :vs-active="active('infrastructure')", vs-icon="question_answer") {{ $t('ttl_menu_infrastructure') }}
+      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") {{ $t('ttl_route_galaxy') }}
+      vs-sidebar-item(@click.native="close", to="infrastructure", :vs-active="active('infrastructure')", vs-icon="question_answer") {{ $t('ttl_route_infrastructure') }}
       vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") {{ $t('ttl_menu_bestiary') }}
+      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") {{ $t('ttl_route_bestiary') }}
       vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") {{ $t('ttl_menu_tree') }}
+      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") {{ $t('ttl_route_tree') }}
     #content
       transition(name="fade")
         router-view

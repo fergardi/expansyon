@@ -3,13 +3,13 @@
     vs-row.flex
       vs-col(vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
         vs-card(vs-color="primary")
-          vs-card-header(vs-background-color="primary", vs-title="lbl_login_form", :vs-fill="true")
+          vs-card-header(vs-background-color="primary", :vs-title="$t('lbl_login_title')", :vs-fill="true")
           vs-card-body
-            vs-input(vs-label="lbl_login_username", vs-placeholder="lbl_login_username", vs-icon="person", v-model="username")
-            vs-input(vs-label="lbl_login_password", vs-placeholder="lbl_login_password", vs-type="password", vs-icon="lock", v-model="password")
+            vs-input(:vs-label="$t('lbl_login_username')", :vs-placeholder="$t('lbl_login_username')", vs-icon="person", v-model="username")
+            vs-input(:vs-label="$t('lbl_login_password')", :vs-placeholder="$t('lbl_login_password')", vs-type="password", vs-icon="lock", v-model="password")
           vs-card-body.actions
-            vs-button(vs-type="relief", vs-color="primary") lbl_button_login
-            vs-button(vs-type="relief", vs-color="primary") lbl_button_register
+            vs-button(vs-type="relief", vs-color="primary") {{ $t('lbl_button_login') }}
+            vs-button(vs-type="relief", vs-color="primary") {{ $t('lbl_button_register') }}
 </template>
 
 <script>
