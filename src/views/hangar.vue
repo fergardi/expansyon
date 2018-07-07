@@ -1,21 +1,21 @@
 <template lang="pug">
-  #infrastructure
-    vs-row.buildings
-      vs-row.level(v-for="(level, index1) in buildings", :key="index1")
-        vs-col.building(v-for="(building, index2) in level.buildings", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
-          vs-avatar(:vs-src="building.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="building.level", v-tooltip="{ text: $t(building.tooltip) }")
-          vs-button(:vs-color="level.color", vs-type="relief", @click="increase(building)") {{ $t(building.name) }}
+  #hangar
+    vs-row.ships
+      vs-row.level(v-for="(level, index1) in ships", :key="index1")
+        vs-col.ship(v-for="(ship, index2) in level.ships", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
+          vs-avatar(:vs-src="ship.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="ship.quantity", v-tooltip="{ text: $t(ship.tooltip) }")
+          vs-button(:vs-color="level.color", vs-type="relief", @click="increase(ship)") {{ $t(ship.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
     
     // save
-    vs-dialog(vs-color="success", :vs-title="$t('ttl_infrastructure_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
-      p {{ $t('txt_infrastructure_save') }}
+    vs-dialog(vs-color="success", :vs-title="$t('ttl_hangar_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
+      p {{ $t('txt_hangar_save') }}
     
     // reset
-    vs-dialog(vs-color="danger", :vs-title="$t('ttl_infrastructure_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
-      p {{ $t('txt_infrastructure_reset') }}
+    vs-dialog(vs-color="danger", :vs-title="$t('ttl_hangar_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
+      p {{ $t('txt_hangar_reset') }}
 </template>
 
 <script>
@@ -23,7 +23,7 @@ import { database } from '@/services/firebase'
 
 export default {
   firebase: {
-    buildings: database.ref('buildings')
+    ships: database.ref('ships')
   },
   data () {
     return {
@@ -40,18 +40,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  #infrastructure
+  #hangar
     padding 5px
     height 100%
     display flex
     flex-direction column
     overflow hidden
-    .buildings
+    .ships
       height 90%
       display flex
       justify-content center
       align-items center
-      .building
+      .ship
         display flex
         justify-content center
         align-items center
@@ -76,4 +76,13 @@ export default {
       display flex
       justify-content space-around
       align-items center
+</style>
+
+<style lang="stylus">
+  #hangar
+    .skill
+      .con-img
+        padding 10px
+    .badgeNumber
+      font-size 1rem
 </style>

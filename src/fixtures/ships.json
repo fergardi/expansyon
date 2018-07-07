@@ -1,0 +1,71 @@
+{
+  "type1" : {
+    "color" : "primary",
+    "ships" : {
+      "ship11" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "ship12" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "ship13" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      }
+    }
+  },
+  "type2" : {
+    "color" : "primary",
+    "ships" : {
+      "ship21" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "ship22" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "ship23" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      }
+    }
+  },
+  "type3" : {
+    "color" : "primary",
+    "ships" : {
+      "ship31" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "ship32" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "ship33" : {
+        "quantity" : 10,
+        "name" : "lbl_ship_telescope",
+        "tooltip": "ttp_ship_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      }
+    }
+  }
+}

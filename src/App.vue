@@ -5,13 +5,9 @@
       h2 {{ $t(title) }}
       vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings", @click="login")
     vs-sidebar(:vs-active.sync="sidebar")
-      vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="galaxy", :vs-active="active('galaxy')", vs-icon="question_answer") {{ $t('ttl_route_galaxy') }}
-      vs-sidebar-item(@click.native="close", to="infrastructure", :vs-active="active('infrastructure')", vs-icon="question_answer") {{ $t('ttl_route_infrastructure') }}
-      vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="bestiary", :vs-active="active('bestiary')", vs-icon="question_answer") {{ $t('ttl_route_bestiary') }}
-      vs-divider(vs-position="left", vs-color="primary", vs-icon="star")
-      vs-sidebar-item(@click.native="close", to="tree", :vs-active="active('tree')", vs-icon="question_answer") {{ $t('ttl_route_tree') }}
+      template(v-for="(block, index1) in menu")
+        vs-divider(vs-position="center", :vs-color="block.color") {{ $t(block.name) }}
+        vs-sidebar-item(v-for="(item, index2) in block.items", :key="`key${index1}${index2}`", @click.native="close", :to="item.route", :vs-active="active(item.route)", :vs-icon="item.icon", :vs-color="block.color") {{ $t(item.name) }}
     #content
       transition(name="fade")
         router-view
@@ -24,7 +20,21 @@ export default {
   name: 'app',
   data () {
     return {
-      sidebar: false
+      sidebar: false,
+      menu: [
+        {
+          name: 'lbl_menu_exterior',
+          color: 'primary',
+          items: [
+            { route: 'galaxy', name: 'ttl_route_galaxy', icon: 'check' },
+            { route: 'empire', name: 'ttl_route_empire', icon: 'check' },
+            { route: 'infrastructure', name: 'ttl_route_infrastructure', icon: 'check' },
+            { route: 'hangar', name: 'ttl_route_hangar', icon: 'check' },
+            { route: 'bestiary', name: 'ttl_route_bestiary', icon: 'check' },
+            { route: 'tree', name: 'ttl_route_tree', icon: 'check' }
+          ]
+        }
+      ]
     }
   },
   methods: {
@@ -75,14 +85,21 @@ export default {
       justify-content space-between !important
       .vs-button
         font-size 1.5rem
-        i
-          color rgba(255,255,255,0.8)
     .vs-button
       font-size 1.2rem
+      color rgba(255,255,255,0.8)
+      i
+        color rgba(255,255,255,0.8)
     .con-input-number
       button
         i
           font-size 1.2rem !important
+    .con-vs-avatar
+      .con-img
+        padding 10px
+      .dot-count.badgeNumber
+        font-size 1rem
+    // transitions
     .fade-enter-active
     .fade-leave-active
       transition-property opacity
