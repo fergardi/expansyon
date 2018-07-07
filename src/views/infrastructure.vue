@@ -1,11 +1,10 @@
 <template lang="pug">
   #infrastructure
     vs-row.buildings
-      vs-col.building(v-for="(building, index1) in buildings", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
-        .image
-          img(:src="building.icon", v-tooltip="{ text: building.tooltip }")
-        .button
-          vs-input-number(:vs-color="building.color", vs-min="0", vs-max="10", vs-size="mini", v-model="building.quantity")
+      vs-row.level(v-for="(level, index1) in buildings", :key="index1")
+        vs-col.building(v-for="(building, index2) in level.buildings", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
+          vs-avatar(:vs-src="building.icon", vs-size="70px", vs-color="#000", vs-badge-color="#000", :vs-badge="building.level", v-tooltip="{ text: $t(building.tooltip) }")
+          vs-button(:vs-color="level.color", vs-type="relief", @click="increase(building)") {{ $t(building.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
@@ -32,11 +31,10 @@ export default {
       confirmReset: false
     }
   },
-  created () {
-    this.$vs.loading({ background: '#000' })
-  },
-  updated () {
-    try { this.$vs.loading.close() } catch (error) {} // fixes null node
+  methods: {
+    increase (skill) {
+      skill.level++
+    }
   }
 }
 </script>
@@ -78,4 +76,13 @@ export default {
       display flex
       justify-content space-around
       align-items center
+</style>
+
+<style lang="stylus">
+  #infrastructure
+    .skill
+      .con-img
+        padding 10px
+    .badgeNumber
+      font-size 1rem
 </style>

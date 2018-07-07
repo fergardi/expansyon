@@ -1,65 +1,71 @@
 {
-  "352e687ds" : {
+  "level1" : {
     "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
+    "buildings" : {
+      "building11" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "building12" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "building13" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      }
+    }
   },
-  "352e6287ds" : {
+  "level2" : {
     "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
+    "buildings" : {
+      "building21" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "building22" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "building23" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      }
+    }
   },
-  "352e6687ds" : {
+  "level3" : {
     "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
-  },
-  "352e68789hds" : {
-    "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
-  },
-  "1352e6287ds" : {
-    "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
-  },
-  "352ed6687ds" : {
-    "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
-  },
-  "352ead687ds" : {
-    "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
-  },
-  "352e62877ds" : {
-    "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
-  },
-  "352fe6687ds" : {
-    "color" : "primary",
-    "name" : "Nombre",
-    "quantity" : 10,
-    "tooltip" : "ttp_building_name",
-    "icon": "https://image.flaticon.com/icons/svg/993/993560.svg"
+    "buildings" : {
+      "building31" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "building32" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      },
+      "building33" : {
+        "level" : 10,
+        "name" : "lbl_building_telescope",
+        "tooltip": "ttp_building_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+      }
+    }
   }
 }
