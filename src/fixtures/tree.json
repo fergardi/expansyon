@@ -1,73 +1,81 @@
 {
-  "branch1" : {
-    "color" : "success",
-    "order" : 1,
-    "skills" : {
-      "skill1" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
-      },
-      "skill2" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
-      },
-      "skill3" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
-      }
-    }
-  },
-  "branch2" : {
+  "level1" : {
     "color" : "primary",
-    "order" : 2,
     "skills" : {
-      "skill1" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
-      },
-      "skill2" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
-      },
-      "skill3" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
+      "skill11" : {
+        "level" : 10,
+        "name" : "lbl_skill_telescope",
+        "tooltip": "ttp_skill_telescope",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
       }
     }
   },
-  "branch3" : {
-    "color" : "danger",
-    "order" : 3,
+  "level2" : {
+    "color" : "primary",
     "skills" : {
-      "skill1" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
+      "skill21" : {
+        "level" : 10,
+        "name" : "lbl_skill_dexterity",
+        "tooltip": "ttp_skill_dexterity",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475846.svg"
       },
-      "skill2" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
+      "skill22" : {
+        "level" : 10,
+        "name" : "lbl_skill_defense",
+        "tooltip": "ttp_skill_defense",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475849.svg"
+      }
+    }
+  },
+  "level3" : {
+    "color" : "primary",
+    "skills" : {
+      "skill31" : {
+        "level" : 10,
+        "name" : "lbl_skill_attack",
+        "tooltip": "ttp_skill_attack",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475855.svg"
       },
-      "skill3" : {
-        "icon" : "https://image.flaticon.com/icons/svg/272/272356.svg",
-        "level" : 1,
-        "name" : "nombre",
-        "tooltip" : "ttp_skill_name"
+      "skill32" : {
+        "level" : 10,
+        "name" : "lbl_skill_life",
+        "tooltip": "ttp_skill_life",
+        "icon" : "https://image.flaticon.com/icons/svg/214/214309.svg"
+      },
+      "skill33" : {
+        "level" : 10,
+        "name" : "lbl_skill_magic",
+        "tooltip": "ttp_skill_magic",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475870.svg"
+      }
+    }
+  },
+  "level4" : {
+    "color" : "primary",
+    "skills" : {
+      "skill41" : {
+        "level" : 10,
+        "name" : "lbl_skill_pillage",
+        "tooltip": "ttp_skill_pillage",
+        "icon" : "https://image.flaticon.com/icons/svg/507/507754.svg"
+      },
+      "skill42" : {
+        "level" : 10,
+        "name" : "lbl_skill_powder",
+        "tooltip": "ttp_skill_powder",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475861.svg"
+      },
+      "skill43" : {
+        "level" : 10,
+        "name" : "lbl_skill_ammunition",
+        "tooltip": "ttp_skill_ammunition",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475851.svg"
+      },
+      "skill44" : {
+        "level" : 10,
+        "name" : "lbl_skill_luck",
+        "tooltip": "ttp_skill_luck",
+        "icon" : "https://image.flaticon.com/icons/svg/475/475853.svg"
       }
     }
   }

@@ -46,4 +46,6 @@ export default {
       background-color rgba(0,0,0,0.75)
       .label
         color rgba(255,255,255,0.8) !important
+      .con-input + .con-input
+        margin-top 27px
 </style>

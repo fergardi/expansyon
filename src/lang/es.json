@@ -3,7 +3,7 @@
   "ttl_route_galaxy": "Galaxia",
   "ttl_route_infrastructure": "Infraestructura",
   "ttl_route_bestiary": "Bestiario",
-  "ttl_route_tree": "Especialidades",
+  "ttl_route_tree": "Habilidades",
   
   "lbl_button_attack": "Atacar",
   "lbl_button_save": "Guardar",
@@ -17,7 +17,7 @@
   
   "ttp_planet_globe": "Planeta",
   "ttp_planet_moon": "Luna",
-  "ttp_planet_vortex": "Vórtice",
+  "ttp_planet_satellite": "Vórtice",
 
   "ttp_resource_mana": "Maná",
   "ttp_resource_gold": "Oro",
@@ -28,12 +28,33 @@
   "ttp_troop_character": "Personaje",
   "ttp_troop_type": "Tipo",
   "ttp_troop_element": "Elemento",
-  
+
   "ttp_stats_magic": "Magia",
   "ttp_stats_attack": "Ataque",
   "ttp_stats_defense": "Defensa",
   "ttp_stats_dexterity": "Agilidad",
   "ttp_stats_life": "Salud",
+
+  "ttl_infrastructure_save": "Guardar",
+  "txt_infrastructure_save": "Estás seguro de querer guardar estas estructuras?",
+  "ttl_infrastructure_reset": "Reiniciar",
+  "txt_infrastructure_reset": "Estás seguro de querer reiniciar estas estructuras?",
+
+  "ttl_tree_save": "Guardar Habilidades",
+  "txt_tree_save": "Estás seguro de querer guardar estas Habilidades?",
+  "ttl_tree_reset": "Reiniciar Habilidades",
+  "txt_tree_reset": "Estás seguro de querer reiniciar tus Habilidades? Podrás redistribuir tus puntos como si fuera la primera vez.",
+
+  "lbl_skill_telescope": "Telescopio",
+  "lbl_skill_dexterity": "Agilidad",
+  "lbl_skill_defense": "Defensa",
+  "lbl_skill_attack": "Ataque",
+  "lbl_skill_life": "Salud",
+  "lbl_skill_magic": "Magia",
+  "lbl_skill_pillage": "Pillaje",
+  "lbl_skill_powder": "Pólvora",
+  "lbl_skill_ammunition": "Munición",
+  "lbl_skill_luck": "Suerte",
 
   "ttl_troop_dragon": "Dragón",
   "ttl_troop_cerberus": "Cerbero",
