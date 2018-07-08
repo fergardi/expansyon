@@ -1,13 +1,33 @@
 <template lang="pug">
   #app
+    
+    // topbar
     vs-topbar(vs-color="primary")
-      vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="menu", @click="sidebar = !sidebar")
+      i.material-icons(@click="sidebar = !sidebar") menu
+      // vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="menu", @click="sidebar = !sidebar")
       h2 {{ $t(title) }}
-      vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings", @click="login")
+      vs-dropdown
+        i.material-icons more_vert
+        vs-dropdown-menu
+          vs-dropdown-item
+            vs-chip(vs-color="danger", vs-icon="check") 1000 {{ $t('lbl_resource_influence') }}
+          vs-dropdown-item
+            vs-chip(vs-color="success", vs-icon="check") 1000 {{ $t('lbl_resource_terrain') }}
+          vs-dropdown-item
+            vs-chip(vs-color="warning", vs-icon="check") 1000 {{ $t('lbl_resource_gold') }}
+          vs-dropdown-item
+            vs-chip(vs-color="primary", vs-icon="check") 1000 {{ $t('lbl_resource_mana') }}
+          vs-dropdown-item
+            vs-chip(vs-color="dark", vs-icon="check") 1000 {{ $t('lbl_resource_people') }}
+      // vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings", @click="login")
+    
+    // sidebar
     vs-sidebar(:vs-active.sync="sidebar")
       template(v-for="(block, index1) in menu")
         vs-divider(vs-position="center", :vs-color="block.color") {{ $t(block.name) }}
         vs-sidebar-item(v-for="(item, index2) in block.items", :key="`key${index1}${index2}`", @click.native="close", :to="item.route", :vs-active="active(item.route)", :vs-icon="item.icon", :vs-color="block.color") {{ $t(item.name) }}
+    
+    // content
     #content
       transition(name="fade")
         router-view
@@ -28,6 +48,7 @@ export default {
           items: [
             { route: 'galaxy', name: 'ttl_route_galaxy', icon: 'check' },
             { route: 'empire', name: 'ttl_route_empire', icon: 'check' },
+            { route: 'army', name: 'ttl_route_army', icon: 'check' },
             { route: 'infrastructure', name: 'ttl_route_infrastructure', icon: 'check' },
             { route: 'hangar', name: 'ttl_route_hangar', icon: 'check' },
             { route: 'bestiary', name: 'ttl_route_bestiary', icon: 'check' },
@@ -83,8 +104,19 @@ export default {
     .vs-topbar
       min-height 50px
       justify-content space-between !important
-      .vs-button
-        font-size 1.5rem
+      i
+        padding 10px
+    .vs-con-dropdown
+      i
+        color rgba(255,255,255,0.8)
+    .con-vs-dropdown-menu
+      .vs-dropdown-item
+        white-space nowrap
+        a
+          padding-top 0
+          padding-bottom 0
+          .con-vs-chip
+            width 100%
     .vs-button
       font-size 1.2rem
       color rgba(255,255,255,0.8)
@@ -99,7 +131,7 @@ export default {
         padding 10px
       .dot-count.badgeNumber
         font-size 1rem
-    // transitions
+    /* transitions */
     .fade-enter-active
     .fade-leave-active
       transition-property opacity

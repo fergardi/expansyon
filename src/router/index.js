@@ -9,6 +9,7 @@ let router = new Router({
     { path: '/', redirect: '/galaxy' },
     { path: '/login', name: 'ttl_route_login', component: () => import('@/views/login') },
     { path: '/galaxy', name: 'ttl_route_galaxy', component: () => import('@/views/galaxy') },
+    { path: '/army', name: 'ttl_route_army', component: () => import('@/views/army') },
     { path: '/empire', name: 'ttl_route_empire', component: () => import('@/views/empire') },
     { path: '/hangar', name: 'ttl_route_hangar', component: () => import('@/views/hangar') },
     { path: '/infrastructure', name: 'ttl_route_infrastructure', component: () => import('@/views/infrastructure') },

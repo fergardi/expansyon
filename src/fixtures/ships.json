@@ -4,44 +4,32 @@
     "ships" : {
       "ship11" : {
         "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+        "name" : "lbl_ship_fighter",
+        "tooltip": "ttp_ship_fighter",
+        "icon" : "https://image.flaticon.com/icons/svg/662/662950.svg"
       },
       "ship12" : {
         "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      },
-      "ship13" : {
-        "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+        "name" : "lbl_ship_cruiser",
+        "tooltip": "ttp_ship_cruiser",
+        "icon" : "https://image.flaticon.com/icons/svg/662/662923.svg"
       }
     }
   },
   "type2" : {
     "color" : "primary",
-    "ships" : {
+    "ships": {
       "ship21" : {
         "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+        "name" : "lbl_ship_bomber",
+        "tooltip": "ttp_ship_bomber",
+        "icon" : "https://image.flaticon.com/icons/svg/662/662934.svg"
       },
       "ship22" : {
         "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      },
-      "ship23" : {
-        "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+        "name" : "lbl_ship_satellite",
+        "tooltip": "ttp_ship_satellite",
+        "icon" : "https://image.flaticon.com/icons/svg/662/662942.svg"
       }
     }
   },
@@ -50,21 +38,15 @@
     "ships" : {
       "ship31" : {
         "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+        "name" : "lbl_ship_carrier",
+        "tooltip": "ttp_ship_carrier",
+        "icon" : "https://image.flaticon.com/icons/svg/662/662933.svg"
       },
       "ship32" : {
         "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      },
-      "ship33" : {
-        "quantity" : 10,
-        "name" : "lbl_ship_telescope",
-        "tooltip": "ttp_ship_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
+        "name" : "lbl_ship_recycler",
+        "tooltip": "ttp_ship_recycler",
+        "icon" : "https://image.flaticon.com/icons/svg/662/662926.svg"
       }
     }
   }

@@ -16,7 +16,7 @@
       vs-progress(:vs-percent="planet.mana", vs-color="primary", v-tooltip="{ text: $t('ttp_resource_mana') }")
       vs-progress(:vs-percent="planet.gold", vs-color="warning", v-tooltip="{ text: $t('ttp_resource_gold') }")
       vs-progress(:vs-percent="planet.people", vs-color="dark", v-tooltip="{ text: $t('ttp_resource_people') }")
-      vs-progress(:vs-percent="planet.size", vs-color="success", v-tooltip="{ text: $t('ttp_resource_space') }")
+      vs-progress(:vs-percent="planet.size", vs-color="success", v-tooltip="{ text: $t('ttp_resource_terrain') }")
       vs-progress(:vs-percent="planet.influence", vs-color="danger", v-tooltip="{ text: $t('ttp_resource_influence') }")
 </template>
 

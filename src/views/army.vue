@@ -1,21 +1,20 @@
 <template lang="pug">
-  #hangar
-    vs-row.ships
-      vs-row.level(v-for="(level, index1) in ships", :key="index1")
-        vs-col.ship(v-for="(ship, index2) in level.ships", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
-          vs-avatar(:vs-src="ship.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="ship.quantity", v-tooltip="{ text: $t(ship.tooltip) }")
-          vs-button(:vs-color="level.color", vs-type="relief", @click="increase(ship)") {{ $t(ship.name) }}
+  #army
+    vs-row.troops
+      vs-col.troop(v-for="(troop, index1) in troops", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
+        vs-avatar(:vs-src="troop.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="troop.quantity", v-tooltip="{ text: $t(troop.tooltip) }")
+        vs-button(:vs-color="troop.color", vs-type="relief", @click="increase(troop)") {{ $t(troop.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
     
     // save
-    vs-dialog(vs-color="success", :vs-title="$t('ttl_hangar_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
-      p {{ $t('txt_hangar_save') }}
+    vs-dialog(vs-color="success", :vs-title="$t('ttl_army_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
+      p {{ $t('txt_army_save') }}
     
     // reset
-    vs-dialog(vs-color="danger", :vs-title="$t('ttl_hangar_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
-      p {{ $t('txt_hangar_reset') }}
+    vs-dialog(vs-color="danger", :vs-title="$t('ttl_army_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
+      p {{ $t('txt_army_reset') }}
 </template>
 
 <script>
@@ -23,7 +22,7 @@ import { database } from '@/services/firebase'
 
 export default {
   firebase: {
-    ships: database.ref('ships')
+    troops: database.ref('users').child('test').child('troops')
   },
   data () {
     return {
@@ -32,26 +31,28 @@ export default {
     }
   },
   methods: {
-    increase (ship) {
-      ship.quantity++
+    increase (troop) {
+      troop.quantity++
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  #hangar
+  #army
     padding 5px
     height 100%
     display flex
     flex-direction column
     overflow hidden
-    .ships
+    .troops
       height 90%
       display flex
       justify-content center
       align-items center
-      .ship
+      overflow-y auto
+      .troop
+        padding 5px 0
         display flex
         justify-content center
         align-items center
@@ -79,7 +80,7 @@ export default {
 </style>
 
 <style lang="stylus">
-  #hangar
+  #army
     .skill
       .con-img
         padding 10px

@@ -3,325 +3,175 @@
     "icon" : "https://image.flaticon.com/icons/svg/477/477161.svg",
     "name" : "lbl_troop_dragon",
     "tooltip" : "ttp_troop_dragon",
-    "type": "flying",
-    "element": "fire",
     "color": "danger",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "cerberus" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477177.svg",
     "name" : "lbl_troop_cerberus",
     "tooltip" : "ttp_troop_cerberus",
-    "type": "melee",
-    "element": "fire",
     "color": "danger",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "demon" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477191.svg",
     "name" : "lbl_troop_demon",
     "tooltip" : "ttp_troop_demon",
-    "type": "melee",
-    "element": "fire",
     "color": "danger",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "minotaur" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477188.svg",
     "name" : "lbl_troop_minotaur",
     "tooltip" : "ttp_troop_minotaur",
-    "type": "melee",
-    "element": "fire",
     "color": "danger",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "phoenix" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477193.svg",
     "name" : "lbl_troop_phoenix",
     "tooltip" : "ttp_troop_phoenix",
-    "type": "flying",
-    "element": "fire",
     "color": "danger",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "djinni" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477157.svg",
     "name" : "lbl_troop_djinni",
     "tooltip" : "ttp_troop_djinni",
-    "type": "distance",
-    "element": "lightning",
     "color": "primary",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "gorgon" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477197.svg",
     "name" : "lbl_troop_gorgon",
     "tooltip" : "ttp_troop_gorgon",
-    "type": "melee",
-    "element": "water",
     "color": "primary",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "kraken" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477201.svg",
     "name" : "lbl_troop_kraken",
     "tooltip" : "ttp_troop_kraken",
-    "type": "melee",
-    "element": "water",
     "color": "primary",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "harpy" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477194.svg",
     "name" : "lbl_troop_harpy",
     "tooltip" : "ttp_troop_harpy",
-    "type": "flying",
-    "element": "water",
     "color": "primary",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "medusa" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477170.svg",
     "name" : "lbl_troop_medusa",
     "tooltip" : "ttp_troop_medusa",
-    "type": "distance",
-    "element": "water",
     "color": "primary",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "hydra" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477167.svg",
     "name" : "lbl_troop_hydra",
     "tooltip" : "ttp_troop_hydra",
-    "type": "melee",
-    "element": "poison",
     "color": "success",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "elf" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477187.svg",
     "name" : "lbl_troop_elf",
     "tooltip" : "ttp_troop_elf",
-    "type": "distance",
-    "element": "poison",
     "color": "success",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "centaur" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477202.svg",
     "name" : "lbl_troop_centaur",
     "tooltip" : "ttp_troop_centaur",
-    "type": "distance",
-    "element": "poison",
     "color": "success",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "chimera" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477169.svg",
     "name" : "lbl_troop_chimera",
     "tooltip" : "ttp_troop_chimera",
-    "type": "melee",
-    "element": "poison",
     "color": "success",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "satyr" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477186.svg",
     "name" : "lbl_troop_satyr",
     "tooltip" : "ttp_troop_satyr",
-    "type": "melee",
-    "element": "poison",
     "color": "success",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "pegasus" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477165.svg",
     "name" : "lbl_troop_pegasus",
     "tooltip" : "ttp_troop_pegasus",
-    "type": "flying",
-    "element": "holy",
     "color": "warning",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "valkyrie" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477181.svg",
     "name" : "lbl_troop_valkyrie",
     "tooltip" : "ttp_troop_valkyrie",
-    "type": "melee",
-    "element": "holy",
     "color": "warning",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "gryphon" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477176.svg",
     "name" : "lbl_troop_gryphon",
     "tooltip" : "ttp_troop_gryphon",
-    "type": "flying",
-    "element": "holy",
     "color": "warning",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "unicorn" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477153.svg",
     "name" : "lbl_troop_unicorn",
     "tooltip" : "ttp_troop_unicorn",
-    "type": "melee",
-    "element": "holy",
     "color": "warning",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "mage" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477154.svg",
     "name" : "lbl_troop_mage",
     "tooltip" : "ttp_troop_mage",
-    "type": "distance",
-    "element": "lightning",
     "color": "warning",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "ent" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477178.svg",
     "name" : "lbl_troop_ent",
     "tooltip" : "ttp_troop_ent",
-    "type": "melee",
-    "element": "poison",
     "color": "dark",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "werewolf" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477183.svg",
     "name" : "lbl_troop_werewolf",
     "tooltip" : "ttp_troop_werewolf",
-    "type": "melee",
-    "element": "poison",
     "color": "dark",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "vampire" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477174.svg",
     "name" : "lbl_troop_vampire",
     "tooltip" : "ttp_troop_vampire",
-    "type": "distance",
-    "element": "dark",
     "color": "dark",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "ghost" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477155.svg",
     "name" : "lbl_troop_ghost",
     "tooltip" : "ttp_troop_ghost",
-    "type": "flying",
-    "element": "dark",
     "color": "dark",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   },
   "zombie" : {
     "icon" : "https://image.flaticon.com/icons/svg/477/477162.svg",
     "name" : "lbl_troop_zombie",
     "tooltip" : "ttp_troop_zombie",
-    "type": "distance",
-    "element": "lightning",
     "color": "dark",
-    "attack": 50,
-    "defense": 40,
-    "magic": 30,
-    "dexterity": 20,
-    "life": 80
+    "quantity": 10
   }
 }

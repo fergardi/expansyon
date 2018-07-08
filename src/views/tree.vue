@@ -3,7 +3,7 @@
     vs-row.skills
       vs-row.level(v-for="(level, index1) in tree", :key="index1")
         vs-col.skill(v-for="(skill, index2) in level.skills", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", :vs-w="(12 / (index1 + 1))")
-          vs-avatar(:vs-src="skill.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="skill.level", v-tooltip="{ text: $t(skill.tooltip) }")
+          vs-avatar(:vs-src="skill.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="skill.level", v-tooltip="{ text: $t(skill.tooltip) }")
           vs-button(:vs-color="level.color", vs-type="relief", @click="increase(skill)") {{ $t(skill.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
