@@ -1,9 +1,14 @@
 <template lang="pug">
   #galaxy
-    carousel-3d.constellation(:autoplay="false", :display="5", :count="planets.length", :border="0", :height="400", ref="constellation")
-      slide.slide(v-for="(planet, index) in planets", :key="index", :index="index")
-        planet(:planet="planet")
-    .actions
+
+    // galaxy
+    vs-row.planets
+      carousel-3d.constellation(:autoplay="false", :display="5", :count="planets.length", :border="0", :height="400", ref="constellation")
+        slide.slide(v-for="(planet, index) in planets", :key="index", :index="index")
+          planet(:planet="planet")
+    
+    // actions
+    vs-row.actions
       vs-button(vs-type="relief", vs-color="primary", vs-icon="check", @click="dialog = true") {{ $t('lbl_button_attack') }}
     
     // dialog

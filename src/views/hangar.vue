@@ -1,11 +1,15 @@
 <template lang="pug">
   #hangar
+
+    // ships
     vs-row.ships
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-row.level(v-for="(level, index1) in ships", :key="index1")
           vs-col.ship(v-for="(ship, index2) in level.ships", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
-            vs-avatar(:vs-src="ship.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="ship.quantity", v-tooltip="{ text: $t(ship.tooltip) }")
+            vs-avatar(:vs-src="ship.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="ship.quantity", v-tooltip="{ text: $t(ship.tooltip) }")
             vs-button(:vs-color="level.color", vs-type="relief", @click="increase(ship)") {{ $t(ship.name) }}
+
+    // actions
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}

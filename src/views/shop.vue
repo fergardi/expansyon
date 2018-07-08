@@ -1,5 +1,6 @@
 <template lang="pug">
   #shop
+
     // planet
     vs-row.planets
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
@@ -11,21 +12,21 @@
     vs-row.ships
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-col.ship(v-for="(ship, index1) in ships", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
-          vs-avatar(:vs-src="ship.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="10", v-tooltip="{ text: $t(ship.tooltip) }")
+          vs-avatar(:vs-src="ship.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="10", v-tooltip="{ text: $t(ship.tooltip) }")
           vs-button(:vs-color="ship.color", vs-type="relief") {{ $t('lbl_button_buy') }}
 
     // troops
     vs-row.troops
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-col.troop(v-for="(troop, index1) in troops", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
-          vs-avatar(:vs-src="troop.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="10", v-tooltip="{ text: $t(troop.tooltip) }")
+          vs-avatar(:vs-src="troop.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="10", v-tooltip="{ text: $t(troop.tooltip) }")
           vs-button(:vs-color="troop.color", vs-type="relief") {{ $t('lbl_button_buy') }}
 
     // artifacts
     vs-row.artifacts
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-col.artifact(v-for="(artifact, index1) in artifacts", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
-          vs-avatar(:vs-src="artifact.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="10", v-tooltip="{ text: $t(artifact.tooltip) }")
+          vs-avatar(:vs-src="artifact.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="10", v-tooltip="{ text: $t(artifact.tooltip) }")
           vs-button(:vs-color="artifact.color", vs-type="relief") {{ $t('lbl_button_buy') }}
     
     // confirm

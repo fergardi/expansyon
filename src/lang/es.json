@@ -1,5 +1,5 @@
 {
-  "ttl_route_login": "Expansyon",
+  "ttl_route_login": "Ingreso",
   "ttl_route_galaxy": "Galaxia",
   "ttl_route_infrastructure": "Infraestructura",
   "ttl_route_bestiary": "Bestiario",
@@ -11,6 +11,7 @@
   "ttl_route_shop": "Tienda",
 
   "lbl_menu_exterior": "Exterior",
+  "lbl_menu_account": "Cuenta",
   
   "lbl_button_attack": "Atacar",
   "lbl_button_save": "Guardar",

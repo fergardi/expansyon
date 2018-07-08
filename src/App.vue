@@ -54,6 +54,13 @@ export default {
             { route: 'bestiary', name: 'ttl_route_bestiary', icon: 'check' },
             { route: 'tree', name: 'ttl_route_tree', icon: 'check' }
           ]
+        },
+        {
+          name: 'lbl_menu_account',
+          color: 'dark',
+          items: [
+            { route: 'login', name: 'ttl_route_login', icon: 'check' }
+          ]
         }
       ]
     }
@@ -90,7 +97,7 @@ export default {
     width 100vw
     height 100vh
   body
-    background-image url('http://latest-headlines.com/upload/news/image_1524836778_3423560.jpg')
+    background-image url('https://image.freepik.com/free-vector/beautiful-eclipse-background-with-sparkle_23-2147667751.jpg')
     background-repeat no-repeat
     background-size cover
     background-position center
