@@ -13,6 +13,8 @@ let router = new Router({
     { path: '/empire', name: 'ttl_route_empire', component: () => import('@/views/empire') },
     { path: '/hangar', name: 'ttl_route_hangar', component: () => import('@/views/hangar') },
     { path: '/infrastructure', name: 'ttl_route_infrastructure', component: () => import('@/views/infrastructure') },
+    { path: '/shop', name: 'ttl_route_shop', component: () => import('@/views/shop') },
+    { path: '/artifacts', name: 'ttl_route_artifacts', component: () => import('@/views/artifacts') },
     { path: '/bestiary', name: 'ttl_route_bestiary', component: () => import('@/views/bestiary') },
     { path: '/tree', name: 'ttl_route_tree', component: () => import('@/views/tree') },
     { path: '*', redirect: '/' }

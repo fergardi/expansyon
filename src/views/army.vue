@@ -1,9 +1,10 @@
 <template lang="pug">
   #army
     vs-row.troops
-      vs-col.troop(v-for="(troop, index1) in troops", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
-        vs-avatar(:vs-src="troop.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="troop.quantity", v-tooltip="{ text: $t(troop.tooltip) }")
-        vs-button(:vs-color="troop.color", vs-type="relief", @click="increase(troop)") {{ $t(troop.name) }}
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-col.troop(v-for="(troop, index1) in troops", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
+          vs-avatar(:vs-src="troop.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="troop.quantity", v-tooltip="{ text: $t(troop.tooltip) }")
+          vs-button(:vs-color="troop.color", vs-type="relief", @click="increase(troop)") {{ $t(troop.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
@@ -46,44 +47,26 @@ export default {
     flex-direction column
     overflow hidden
     .troops
-      height 90%
+      height 85%
       display flex
       justify-content center
       align-items center
       overflow-y auto
+      > div // fix transitions
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        height 100%
+        width 100%
       .troop
         padding 5px 0
         display flex
         justify-content center
         align-items center
         flex-direction column
-        .image
-          height 70%
-          width 100%
-          display flex
-          justify-content center
-          align-items center
-          img
-            width 75px
-            height auto
-        .button
-          height 30%
-          width 100%
-          display flex
-          justify-content center
-          align-items center
     .actions
-      height 10%
+      height 15%
       display flex
       justify-content space-around
       align-items center
-</style>
-
-<style lang="stylus">
-  #army
-    .skill
-      .con-img
-        padding 10px
-    .badgeNumber
-      font-size 1rem
 </style>

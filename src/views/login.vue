@@ -10,7 +10,7 @@
             vs-tab(:vs-label="$t('lbl_login_access')")
               vs-card-body
                 .center
-                  vs-avatar(vs-src="https://image.flaticon.com/icons/svg/149/149071.svg", vs-size="75px", vs-badge="10", vs-color="primary", vs-badge-color="primary")
+                  vs-avatar(vs-src="https://image.flaticon.com/icons/svg/149/149071.svg", vs-size="80px", vs-badge="10", vs-color="primary", vs-badge-color="primary")
                 vs-input(:vs-label="$t('lbl_login_username')", :vs-placeholder="$t('lbl_login_username')", vs-icon="person", v-model="username")
                 vs-input(:vs-label="$t('lbl_login_password')", :vs-placeholder="$t('lbl_login_password')", vs-type="password", vs-icon="lock", v-model="password")
                 vs-checkbox(v-model="remember", vs-color="primary") {{ $t('lbl_login_remember') }}
@@ -22,7 +22,7 @@
             vs-tab(:vs-label="$t('lbl_login_register')")
               vs-card-body
                 .center
-                  vs-avatar(vs-src="https://image.flaticon.com/icons/svg/149/149071.svg", vs-size="75px", vs-badge="10", vs-color="primary", vs-badge-color="primary")
+                  vs-avatar(vs-src="https://image.flaticon.com/icons/svg/149/149071.svg", vs-size="80px", vs-badge="10", vs-color="primary", vs-badge-color="primary")
                 vs-input(:vs-label="$t('lbl_login_email')", :vs-placeholder="$t('lbl_login_email')", vs-type="email", vs-icon="email", v-model="email")
                 vs-input(:vs-label="$t('lbl_login_username')", :vs-placeholder="$t('lbl_login_username')", vs-icon="person", v-model="username")
                 vs-input(:vs-label="$t('lbl_login_password')", :vs-placeholder="$t('lbl_login_password')", vs-type="password", vs-icon="lock", v-model="password")
@@ -83,5 +83,4 @@ export default {
           color rgba(255,255,255,0.8)
         &.tab-activo
           background-color rgba(255,255,255,0.75)
-
 </style>

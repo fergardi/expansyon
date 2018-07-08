@@ -1,0 +1,58 @@
+{
+  "planets": {
+    "planeta1" : {
+      "icon" : "https://image.flaticon.com/icons/svg/124/124558.svg",
+      "color" : "danger",
+      "gold" : 50,
+      "influence" : 70,
+      "mana" : 20,
+      "moon" : true,
+      "name" : "planeta 1",
+      "people" : 30,
+      "troop" : "https://image.flaticon.com/icons/svg/477/477161.svg",
+      "size" : 10
+    }
+  },
+  "ships" : {
+    "ship11" : {
+      "quantity" : 10,
+      "name" : "lbl_ship_fighter",
+      "tooltip": "ttp_ship_fighter",
+      "icon" : "https://image.flaticon.com/icons/svg/662/662950.svg"
+    },
+    "ship12" : {
+      "quantity" : 10,
+      "name" : "lbl_ship_cruiser",
+      "tooltip": "ttp_ship_cruiser",
+      "icon" : "https://image.flaticon.com/icons/svg/662/662923.svg"
+    }
+  },
+  "troops" : {
+    "dragon" : {
+      "icon" : "https://image.flaticon.com/icons/svg/477/477161.svg",
+      "name" : "lbl_troop_dragon",
+      "tooltip" : "ttp_troop_dragon",
+      "color": "danger"
+    },
+    "cerberus" : {
+      "icon" : "https://image.flaticon.com/icons/svg/477/477177.svg",
+      "name" : "lbl_troop_cerberus",
+      "tooltip" : "ttp_troop_cerberus",
+      "color": "danger"
+    }
+  },
+  "artifacts" : {
+    "treasure" : {
+      "icon" : "https://image.flaticon.com/icons/svg/468/468398.svg",
+      "name" : "lbl_artifact_treasure",
+      "tooltip" : "ttp_artifact_treasure",
+      "color": "warning"
+    },
+    "map" : {
+      "icon" : "https://image.flaticon.com/icons/svg/827/827286.svg",
+      "name" : "lbl_artifact_map",
+      "tooltip" : "ttp_artifact_map",
+      "color": "warning"
+    }
+  }
+}

@@ -1,10 +1,11 @@
 <template lang="pug">
   #hangar
     vs-row.ships
-      vs-row.level(v-for="(level, index1) in ships", :key="index1")
-        vs-col.ship(v-for="(ship, index2) in level.ships", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
-          vs-avatar(:vs-src="ship.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="ship.quantity", v-tooltip="{ text: $t(ship.tooltip) }")
-          vs-button(:vs-color="level.color", vs-type="relief", @click="increase(ship)") {{ $t(ship.name) }}
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-row.level(v-for="(level, index1) in ships", :key="index1")
+          vs-col.ship(v-for="(ship, index2) in level.ships", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
+            vs-avatar(:vs-src="ship.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="ship.quantity", v-tooltip="{ text: $t(ship.tooltip) }")
+            vs-button(:vs-color="level.color", vs-type="relief", @click="increase(ship)") {{ $t(ship.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
@@ -47,42 +48,27 @@ export default {
     flex-direction column
     overflow hidden
     .ships
-      height 90%
+      height 85%
       display flex
       justify-content center
       align-items center
-      .ship
+      > div // fix transitions
         display flex
-        justify-content center
-        align-items center
         flex-direction column
-        .image
-          height 70%
-          width 100%
+        flex-wrap nowrap
+        height 100%
+        width 100%
+      .level
+        display flex
+        height 100%
+        .ship
           display flex
           justify-content center
           align-items center
-          img
-            width 75px
-            height auto
-        .button
-          height 30%
-          width 100%
-          display flex
-          justify-content center
-          align-items center
+          flex-direction column
     .actions
-      height 10%
+      height 15%
       display flex
       justify-content space-around
       align-items center
-</style>
-
-<style lang="stylus">
-  #hangar
-    .skill
-      .con-img
-        padding 10px
-    .badgeNumber
-      font-size 1rem
 </style>

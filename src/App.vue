@@ -4,7 +4,6 @@
     // topbar
     vs-topbar(vs-color="primary")
       i.material-icons(@click="sidebar = !sidebar") menu
-      // vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="menu", @click="sidebar = !sidebar")
       h2 {{ $t(title) }}
       vs-dropdown
         i.material-icons more_vert
@@ -19,7 +18,6 @@
             vs-chip(vs-color="primary", vs-icon="check") 1000 {{ $t('lbl_resource_mana') }}
           vs-dropdown-item
             vs-chip(vs-color="dark", vs-icon="check") 1000 {{ $t('lbl_resource_people') }}
-      // vs-button(vs-color="primary", vs-color-text="white", vs-type="line", vs-icon="settings", @click="login")
     
     // sidebar
     vs-sidebar(:vs-active.sync="sidebar")
@@ -50,6 +48,8 @@ export default {
             { route: 'empire', name: 'ttl_route_empire', icon: 'check' },
             { route: 'army', name: 'ttl_route_army', icon: 'check' },
             { route: 'infrastructure', name: 'ttl_route_infrastructure', icon: 'check' },
+            { route: 'shop', name: 'ttl_route_shop', icon: 'check' },
+            { route: 'artifacts', name: 'ttl_route_artifacts', icon: 'check' },
             { route: 'hangar', name: 'ttl_route_hangar', icon: 'check' },
             { route: 'bestiary', name: 'ttl_route_bestiary', icon: 'check' },
             { route: 'tree', name: 'ttl_route_tree', icon: 'check' }
@@ -78,6 +78,7 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
   @import url('https://fonts.googleapis.com/css?family=Wendy+One')
   *
     font-family 'Wendy One', sans-serif

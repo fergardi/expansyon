@@ -78,7 +78,7 @@ export default {
           height 150px
       .habilities
         img
-          height 75px
+          height 80px
           padding 5px
     .info
       color rgba(255,255,255,0.8)

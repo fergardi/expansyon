@@ -7,6 +7,8 @@
   "ttl_route_hangar": "Hangar",
   "ttl_route_empire": "Imperio",
   "ttl_route_army": "Ejército",
+  "ttl_route_artifacts": "Artefactos",
+  "ttl_route_shop": "Tienda",
 
   "lbl_menu_exterior": "Exterior",
   
@@ -16,6 +18,7 @@
   "lbl_button_login": "Ingreso",
   "lbl_button_register": "Registro",
   "lbl_button_forgot": "Recordar",
+  "lbl_button_buy": "Comprar",
 
   "lbl_login_title": "Identificación",
   "lbl_login_email": "Email",
@@ -78,17 +81,21 @@
   "lbl_skill_luck": "Suerte",
 
   "lbl_ship_fighter": "Caza",
-  "ttp_ship_fighter": "Caza",
   "lbl_ship_cruiser": "Destructor",
-  "ttp_ship_cruiser": "Destructor",
   "lbl_ship_bomber": "Bombardero",
-  "ttp_ship_bomber": "Bombardero",
   "lbl_ship_satellite": "Satélite",
-  "ttp_ship_satellite": "Satélite",
-  "lbl_ship_carrier": "Carguero",
-  "ttp_ship_carrier": "Carguero",
   "lbl_ship_recycler": "Reciclador",
+  "lbl_ship_carrier": "Carguero",
+
+  "ttp_ship_fighter": "Caza",
+  "ttp_ship_cruiser": "Destructor",
+  "ttp_ship_bomber": "Bombardero",
+  "ttp_ship_satellite": "Satélite",
   "ttp_ship_recycler": "Reciclador",
+  "ttp_ship_carrier": "Carguero",
+
+  "lbl_artifact_treasure": "Tesoro",
+  "lbl_artifact_map": "Mapa",
 
   "lbl_troop_dragon": "Dragón",
   "lbl_troop_cerberus": "Cerbero",

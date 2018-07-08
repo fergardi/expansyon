@@ -1,10 +1,11 @@
 <template lang="pug">
   #tree
     vs-row.skills
-      vs-row.level(v-for="(level, index1) in tree", :key="index1")
-        vs-col.skill(v-for="(skill, index2) in level.skills", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", :vs-w="12 / level.size")
-          vs-avatar(:vs-src="skill.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="skill.level", v-tooltip="{ text: $t(skill.tooltip) }")
-          vs-button(:vs-color="level.color", vs-type="relief", @click="increase(skill)") {{ $t(skill.name) }}
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-row.level(v-for="(level, index1) in tree", :key="index1")
+          vs-col.skill(v-for="(skill, index2) in level.skills", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", :vs-w="12 / level.size")
+            vs-avatar(:vs-src="skill.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="skill.level", v-tooltip="{ text: $t(skill.tooltip) }")
+            vs-button(:vs-color="level.color", vs-type="relief", @click="increase(skill)") {{ $t(skill.name) }}
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
@@ -50,7 +51,13 @@ export default {
       display flex
       flex-direction column
       flex-wrap nowrap
-      height 90%
+      height 85%
+      > div // fix transitions
+        display flex
+        flex-direction column
+        flex-wrap nowrap
+        height 100%
+        width 100%
       .level
         display flex
         height 100%
@@ -61,7 +68,7 @@ export default {
           align-items center
           flex-direction column
     .actions
-      height 10%
+      height 15%
       display flex
       justify-content space-around
       align-items center

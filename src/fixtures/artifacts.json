@@ -1,0 +1,14 @@
+{
+  "treasure" : {
+    "icon" : "https://image.flaticon.com/icons/svg/468/468398.svg",
+    "name" : "lbl_artifact_treasure",
+    "tooltip" : "ttp_artifact_treasure",
+    "color": "warning"
+  },
+  "map" : {
+    "icon" : "https://image.flaticon.com/icons/svg/827/827286.svg",
+    "name" : "lbl_artifact_map",
+    "tooltip" : "ttp_artifact_map",
+    "color": "warning"
+  }
+}

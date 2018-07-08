@@ -26,14 +26,8 @@ export default {
       dialog: false
     }
   },
-  /*
-  created () {
-    this.$vs.loading({ background: '#000' })
-  },
-  */
   updated () {
     this.$refs.constellation && this.$refs.constellation.goSlide(this.$refs.constellation.currentIndex) // fixes invisible slide bug
-    // try { this.$vs.loading.close() } catch (error) {} // fixes null node
   },
   computed: {
     planet () {

@@ -1,17 +1,14 @@
 <template lang="pug">
   vs-card.planet(:vs-color="color")
-    vs-card-header(:vs-background-color="color", :vs-title="name()", :vs-fill="true")
+    vs-card-header(:vs-background-color="color", vs-title="Planeta", :vs-fill="true")
     vs-card-body.space
       .globe(v-tooltip="{ text: $t('ttp_planet_globe') }")
-        // (:src="'/static/img/planets/' + planet.globe")
-        img(:src="planet.globe")
-      .orbit(v-if="planet.moon || planet.satellite")
+        img(:src="planet.icon")
+      .orbit(v-if="planet.moon || planet.troop")
         .moon(v-tooltip="{ text: $t('ttp_planet_moon') }", v-show="planet.moon")
-          // (src="/static/img/planets/moon.png")
           img(src="https://image.flaticon.com/icons/svg/578/578324.svg")
-        .satellite(v-tooltip="{ text: $t('ttp_planet_satellite') }", v-show="planet.satellite")
-          // (src="/static/img/planets/vortex.png")
-          img(src="https://image.flaticon.com/icons/svg/433/433942.svg")
+        .troop(v-tooltip="{ text: $t('ttp_planet_troop') }", v-show="planet.troop")
+          img(:src="planet.troop")
     vs-card-body.stats
       vs-progress(:vs-percent="planet.mana", vs-color="primary", v-tooltip="{ text: $t('ttp_resource_mana') }")
       vs-progress(:vs-percent="planet.gold", vs-color="warning", v-tooltip="{ text: $t('ttp_resource_gold') }")
@@ -80,7 +77,15 @@ export default {
           width auto
       .orbit
         img
-          height 75px
+          height 80px
           width auto
           padding 5px
+</style>
+
+<style lang="stylus">
+  .planet
+    .con-vs-card-header
+    .con-vs-card-body
+    .con-vs-card-footer
+      width 100%
 </style>

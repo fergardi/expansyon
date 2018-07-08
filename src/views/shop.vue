@@ -1,0 +1,85 @@
+<template lang="pug">
+  #shop
+    // planet
+    vs-row.planets
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-col.planet(v-for="(planet, index1) in planets", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="12")
+          planet(:planet="planet", key="planet")
+          vs-button(:vs-color="planet.color", vs-type="relief", key="button") {{ $t('lbl_button_buy') }}
+    
+    // ships
+    vs-row.ships
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-col.ship(v-for="(ship, index1) in ships", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
+          vs-avatar(:vs-src="ship.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="10", v-tooltip="{ text: $t(ship.tooltip) }")
+          vs-button(:vs-color="ship.color", vs-type="relief") {{ $t('lbl_button_buy') }}
+
+    // troops
+    vs-row.troops
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-col.troop(v-for="(troop, index1) in troops", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
+          vs-avatar(:vs-src="troop.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="10", v-tooltip="{ text: $t(troop.tooltip) }")
+          vs-button(:vs-color="troop.color", vs-type="relief") {{ $t('lbl_button_buy') }}
+
+    // artifacts
+    vs-row.artifacts
+      transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
+        vs-col.artifact(v-for="(artifact, index1) in artifacts", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
+          vs-avatar(:vs-src="artifact.icon", vs-size="80px", vs-color="#000", vs-badge-color="#000", :vs-badge="10", v-tooltip="{ text: $t(artifact.tooltip) }")
+          vs-button(:vs-color="artifact.color", vs-type="relief") {{ $t('lbl_button_buy') }}
+    
+    // confirm
+    vs-dialog(vs-color="success", :vs-title="$t('ttl_shop_buy')", vs-type="confirm", @vs-accept="confirmBuy = false", :vs-active.sync="confirmBuy")
+      p {{ $t('txt_shop_buy') }}
+</template>
+
+<script>
+import { database } from '@/services/firebase'
+import Planet from '@/components/planet'
+
+export default {
+  components: { Planet },
+  firebase: {
+    planets: database.ref('shop').child('planets'),
+    ships: database.ref('shop').child('ships'),
+    troops: database.ref('shop').child('troops'),
+    artifacts: database.ref('shop').child('artifacts')
+  },
+  data () {
+    return {
+      confirmBuy: false
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+  #shop
+    padding 5px
+    height 100%
+    overflow-y auto
+    .planets
+    .troops
+    .ships
+    .artifacts
+      > div // fix transitions
+        display flex
+        flex-direction row
+        flex-wrap nowrap
+        height 100%
+        width 100%
+      .ship
+      .troop
+      .planet
+      .artifact
+        display flex
+        justify-content center
+        align-items center
+        flex-direction column
+</style>
+
+<style lang="stylus">
+  #shop
+    .vs-row
+      padding-bottom 10px
+</style>
