@@ -3,14 +3,12 @@
     vs-card-header(:vs-background-color="troop.color", :vs-title="$t(troop.name)", :vs-fill="true")
     vs-card-body.attributes
       .character(v-tooltip="{ text: $t('ttp_troop_character') }")
-        img(:src="troop.globe")
+        img(:src="troop.icon")
       .habilities
         .type(v-tooltip="{ text: $t('ttp_troop_type') }")
           img(:src="getTypeImage(troop.type)")
         .element(v-tooltip="{ text: $t('ttp_troop_element') }")
           img(:src="getElementImage(troop.element)")
-    vs-card-body.info
-      p Descripción
     vs-card-body.stats
       vs-progress(:vs-percent="troop.magic", vs-color="primary", v-tooltip="{ text: $t('ttp_stats_magic') }")
       vs-progress(:vs-percent="troop.attack", vs-color="warning", v-tooltip="{ text: $t('ttp_stats_attack') }")

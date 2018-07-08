@@ -2,7 +2,7 @@
   #infrastructure
     vs-row.buildings
       vs-row.level(v-for="(level, index1) in buildings", :key="index1")
-        vs-col.building(v-for="(building, index2) in level.buildings", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
+        vs-col.building(v-for="(building, index2) in level.buildings", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", vs-w="6")
           vs-avatar(:vs-src="building.icon", vs-size="75px", vs-color="#000", vs-badge-color="#000", :vs-badge="building.level", v-tooltip="{ text: $t(building.tooltip) }")
           vs-button(:vs-color="level.color", vs-type="relief", @click="increase(building)") {{ $t(building.name) }}
     vs-row.actions
@@ -23,7 +23,7 @@ import { database } from '@/services/firebase'
 
 export default {
   firebase: {
-    buildings: database.ref('buildings')
+    buildings: database.ref('users').child('test').child('buildings')
   },
   data () {
     return {

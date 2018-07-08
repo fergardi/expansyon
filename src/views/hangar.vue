@@ -23,7 +23,7 @@ import { database } from '@/services/firebase'
 
 export default {
   firebase: {
-    ships: database.ref('ships')
+    ships: database.ref('users').child('test').child('ships')
   },
   data () {
     return {
