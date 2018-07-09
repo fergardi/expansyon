@@ -1,6 +1,4 @@
 <template lang="pug">
-
-  // planet
   vs-card#planet(:vs-color="planet.color")
     vs-card-header(:vs-background-color="planet.color", :vs-title="planet.name", :vs-fill="true")
 
@@ -9,9 +7,9 @@
       .icon(v-tooltip="{ text: $t('ttp_planet_icon') }")
         img(:src="planet.icon")
       .troops(v-if="troop1 || troop2")
-        .troop1(v-tooltip="{ text: $t(troop1.tooltip) }", v-if="troop1")
+        .troop1(v-if="troop1", v-tooltip="{ text: $t(troop1.tooltip) }")
           img(:src="troop1.icon")
-        .troop2(v-tooltip="{ text: $t(troop2.tooltip) }", v-if="troop2")
+        .troop2(v-if="troop2", v-tooltip="{ text: $t(troop2.tooltip) }")
           img(:src="troop2.icon")
 
     // stats
@@ -35,7 +33,7 @@ export default {
       troop2: null
     }
   },
-  async mounted () {
+  async created () {
     if (this.planet.troop1) await this.$bindAsObject('troop1', database.ref('troops').child(this.planet.troop1))
     if (this.planet.troop2) await this.$bindAsObject('troop2', database.ref('troops').child(this.planet.troop2))
   }

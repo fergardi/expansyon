@@ -7,6 +7,7 @@
     "troop1" : "dragon",
     "troop2" : false,
     "name" : "planeta 1",
+    "color" : "primary",
     "people" : 30,
     "size" : 10
   },
@@ -18,6 +19,7 @@
     "troop1" : false,
     "troop2" : "ent",
     "name" : "planeta 2",
+    "color" : "primary",
     "people" : 30,
     "size" : 20
   },
@@ -29,6 +31,7 @@
     "troop1" : false,
     "troop2" : false,
     "name" : "planeta 3",
+    "color" : "primary",
     "people" : 20,
     "size" : 90
   },
@@ -40,6 +43,7 @@
     "troop1" : "hydra",
     "troop2" : false,
     "name" : "planeta 4",
+    "color" : "primary",
     "people" : 30,
     "size" : 90
   },
@@ -51,6 +55,7 @@
     "troop1" : "hydra",
     "troop2" : "hydra",
     "name" : "planeta 5",
+    "color" : "primary",
     "people" : 30,
     "size" : 90
   },
@@ -62,6 +67,7 @@
     "troop1" : false,
     "troop2" : false,
     "name" : "planeta 6",
+    "color" : "primary",
     "people" : 30,
     "size" : 10
   },
@@ -73,6 +79,7 @@
     "troop1" : false,
     "troop2" : false,
     "name" : "planeta 7",
+    "color" : "primary",
     "people" : 30,
     "size" : 20
   },
@@ -84,6 +91,7 @@
     "troop1" : false,
     "troop2" : false,
     "name" : "planeta 8",
+    "color" : "primary",
     "people" : 20,
     "size" : 90
   },
@@ -95,6 +103,7 @@
     "troop1" : false,
     "troop2" : false,
     "name" : "planeta 9",
+    "color" : "primary",
     "people" : 30,
     "size" : 90
   },
@@ -106,6 +115,7 @@
     "troop1" : "dragon",
     "troop2" : "dragon",
     "name" : "planeta 10",
+    "color" : "primary",
     "people" : 30,
     "size" : 90
   },
@@ -117,6 +127,7 @@
     "troop1" : false,
     "troop2" : false,
     "name" : "planeta 11",
+    "color" : "primary",
     "people" : 30,
     "size" : 90
   },
@@ -128,6 +139,7 @@
     "troop1" : "mage",
     "troop2" : false,
     "name" : "planeta 12",
+    "color" : "primary",
     "people" : 30,
     "size" : 90
   }
