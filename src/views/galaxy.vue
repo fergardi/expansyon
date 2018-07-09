@@ -31,6 +31,28 @@ export default {
       dialog: false
     }
   },
+  /*
+  created () {
+    database.ref('planets').once('value', snapshot => {
+      snapshot.forEach(item => {
+        let planet = item.val()
+        if (planet.troop1) {
+          database.ref('troops').child(planet.troop1).once('value', snapshot => {
+            let troop = snapshot.val()
+            planet.troop1 = troop
+          })
+        }
+        if (planet.troop2) {
+          database.ref('troops').child(planet.troop2).once('value', snapshot => {
+            let troop = snapshot.val()
+            planet.troop2 = troop
+          })
+        }
+        this.planets.push(planet)
+      })
+    })
+  },
+  */
   updated () {
     this.$refs.constellation && this.$refs.constellation.goSlide(this.$refs.constellation.currentIndex) // fixes invisible slide bug
   },

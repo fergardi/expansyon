@@ -29,9 +29,7 @@
   "lbl_login_access": "Acceso",
   "lbl_login_remember": "Permanecer identificado",
   
-  "ttp_planet_globe": "Planeta",
-  "ttp_planet_moon": "Luna",
-  "ttp_planet_satellite": "Vórtice",
+  "ttp_planet_icon": "Planeta",
 
   "lbl_resource_mana": "Maná",
   "lbl_resource_gold": "Oro",

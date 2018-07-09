@@ -1,14 +1,20 @@
 <template lang="pug">
-  vs-card.planet(:vs-color="color")
-    vs-card-header(:vs-background-color="color", vs-title="Planeta", :vs-fill="true")
+
+  // planet
+  vs-card#planet(:vs-color="planet.color")
+    vs-card-header(:vs-background-color="planet.color", :vs-title="planet.name", :vs-fill="true")
+
+    // space
     vs-card-body.space
-      .globe(v-tooltip="{ text: $t('ttp_planet_globe') }")
+      .icon(v-tooltip="{ text: $t('ttp_planet_icon') }")
         img(:src="planet.icon")
-      .orbit(v-if="planet.moon || planet.troop")
-        .moon(v-tooltip="{ text: $t('ttp_planet_moon') }", v-show="planet.moon")
-          img(src="https://image.flaticon.com/icons/svg/578/578324.svg")
-        .troop(v-tooltip="{ text: $t('ttp_planet_troop') }", v-show="planet.troop")
-          img(:src="planet.troop")
+      .troops(v-if="troop1 || troop2")
+        .troop1(v-tooltip="{ text: $t(troop1.tooltip) }", v-if="troop1")
+          img(:src="troop1.icon")
+        .troop2(v-tooltip="{ text: $t(troop2.tooltip) }", v-if="troop2")
+          img(:src="troop2.icon")
+
+    // stats
     vs-card-body.stats
       vs-progress(:vs-percent="planet.mana", vs-color="primary", v-tooltip="{ text: $t('ttp_resource_mana') }")
       vs-progress(:vs-percent="planet.gold", vs-color="warning", v-tooltip="{ text: $t('ttp_resource_gold') }")
@@ -18,38 +24,26 @@
 </template>
 
 <script>
+import { database } from '@/services/firebase'
+
 export default {
   name: 'planet',
   props: ['planet'],
-  methods: {
-    name () {
-      return this.str(6) + '_' + this.str(2) + '/' + this.str(2)
-    },
-    str (number) {
-      return (Math.random() + 1).toString(36).substring(2, number + 2).toUpperCase()
+  data () {
+    return {
+      troop1: null,
+      troop2: null
     }
   },
-  computed: {
-    color () {
-      switch (Math.max(this.planet.mana, this.planet.gold, this.planet.people, this.planet.size, this.planet.influence)) {
-        case this.planet.mana:
-          return 'primary'
-        case this.planet.gold:
-          return 'warning'
-        case this.planet.people:
-          return 'dark'
-        case this.planet.size:
-          return 'success'
-        case this.planet.influence:
-          return 'danger'
-      }
-    }
+  async mounted () {
+    if (this.planet.troop1) await this.$bindAsObject('troop1', database.ref('troops').child(this.planet.troop1))
+    if (this.planet.troop2) await this.$bindAsObject('troop2', database.ref('troops').child(this.planet.troop2))
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .planet
+  #planet
     background-color rgba(0,0,0,0.85)
     // background-image url('https://spaceplace.nasa.gov/review/interstellar/cover.sp.png')
     background-repeat no-repeat
@@ -63,19 +57,19 @@ export default {
       justity-content center
       align-items center
       height 100%
-      .globe
-      .orbit
+      .icon
+      .troops
         width 100%
         height 100%
         display flex
         flex-direction column
         justity-content center
         align-items center
-      .globe
+      .icon
         img
           height 150px
           width auto
-      .orbit
+      .troops
         img
           height 80px
           width auto
