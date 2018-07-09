@@ -109,6 +109,7 @@ export default {
         height 100%
       .carousel-3d-slide
         background-color transparent
+        height auto !important
     .vs-topbar
       min-height 50px
       justify-content space-between !important
