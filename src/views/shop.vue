@@ -40,17 +40,39 @@ import Planet from '@/components/planet'
 
 export default {
   components: { Planet },
-  firebase: {
-    planets: database.ref('shop').child('planets'),
-    ships: database.ref('shop').child('ships'),
-    troops: database.ref('shop').child('troops'),
-    artifacts: database.ref('shop').child('artifacts')
+  firebase () {
+    return {
+      planets: {
+        source: database.ref('shop').child('planets'),
+        readyCallback: () => { this.loaded++ }
+      },
+      ships: {
+        source: database.ref('shop').child('ships'),
+        readyCallback: () => { this.loaded++ }
+      },
+      troops: {
+        source: database.ref('shop').child('troops'),
+        readyCallback: () => { this.loaded++ }
+      },
+      artifacts: {
+        source: database.ref('shop').child('artifacts'),
+        readyCallback: () => { this.loaded++ }
+      }
+    }
   },
   data () {
     return {
-      selected: null,
+      loaded: 0,
       confirmBuy: false
     }
+  },
+  watch: {
+    loaded (quantity) {
+      if (quantity >= 4) this.$vs.loading.close()
+    }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   }
 }
 </script>

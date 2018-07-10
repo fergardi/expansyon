@@ -14,8 +14,16 @@ import Troop from '@/components/troop'
 
 export default {
   components: { Troop },
-  firebase: {
-    troops: database.ref('troops')
+  firebase () {
+    return {
+      troops: {
+        source: database.ref('troops'),
+        readyCallback: () => { this.$vs.loading.close() }
+      }
+    }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   }
 }
 </script>

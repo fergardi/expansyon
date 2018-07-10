@@ -14,8 +14,16 @@ import Ship from '@/components/ship'
 
 export default {
   components: { Ship },
-  firebase: {
-    ships: database.ref('ships')
+  firebase () {
+    return {
+      ships: {
+        source: database.ref('ships'),
+        readyCallback: () => { this.$vs.loading.close() }
+      }
+    }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   }
 }
 </script>

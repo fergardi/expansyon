@@ -22,22 +22,24 @@ import Planet from '@/components/planet'
 
 export default {
   components: { Carousel3d, Slide, Planet },
-  firebase: {
-    planets: database.ref('planets')
+  firebase () {
+    return {
+      planets: {
+        source: database.ref('planets'),
+        readyCallback: () => this.$vs.loading.close()
+      }
+    }
   },
   data () {
     return {
       dialog: false
     }
   },
-  /*
   created () {
     this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
-  */
   updated () {
     this.$refs.constellation && this.$refs.constellation.goSlide(this.$refs.constellation.currentIndex) // fixes invisible slide bug
-    // try { this.$vs.loading.close() } catch (error) {} // fixes null node
   },
   computed: {
     planet () {

@@ -14,8 +14,16 @@ import Artifact from '@/components/artifact'
 
 export default {
   components: { Artifact },
-  firebase: {
-    artifacts: database.ref('artifacts')
+  firebase () {
+    return {
+      artifacts: {
+        source: database.ref('artifacts'),
+        readyCallback: () => { this.$vs.loading.close() }
+      }
+    }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   }
 }
 </script>

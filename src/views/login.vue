@@ -4,7 +4,7 @@
     // card
     vs-row.flex
       vs-col(vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
-        vs-card(vs-color="primary")
+        vs-card.animated.bounceIn(vs-color="primary")
           vs-card-header(vs-background-color="primary", :vs-title="$t('lbl_login_title')", :vs-fill="true")
 
           //tabs

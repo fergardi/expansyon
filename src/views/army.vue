@@ -26,14 +26,22 @@
 import { database } from '@/services/firebase'
 
 export default {
-  firebase: {
-    troops: database.ref('users').child('test').child('troops')
+  firebase () {
+    return {
+      troops: {
+        source: database.ref('users').child('test').child('troops'),
+        readyCallback: () => { this.$vs.loading.close() }
+      }
+    }
   },
   data () {
     return {
       confirmSave: false,
       confirmReset: false
     }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
   methods: {
     increase (troop) {

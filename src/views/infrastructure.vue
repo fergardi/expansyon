@@ -27,14 +27,22 @@
 import { database } from '@/services/firebase'
 
 export default {
-  firebase: {
-    buildings: database.ref('users').child('test').child('buildings')
+  firebase () {
+    return {
+      buildings: {
+        source: database.ref('users').child('test').child('buildings'),
+        readyCallback: () => { this.$vs.loading.close() }
+      }
+    }
   },
   data () {
     return {
       confirmSave: false,
       confirmReset: false
     }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
   methods: {
     increase (skill) {

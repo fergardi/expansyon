@@ -27,14 +27,22 @@
 import { database } from '@/services/firebase'
 
 export default {
-  firebase: {
-    tree: database.ref('tree')
+  firebase () {
+    return {
+      tree: {
+        source: database.ref('tree'),
+        readyCallback: () => { this.$vs.loading.close() }
+      }
+    }
   },
   data () {
     return {
       confirmSave: false,
       confirmReset: false
     }
+  },
+  created () {
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
   methods: {
     increase (skill) {

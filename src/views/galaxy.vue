@@ -23,36 +23,22 @@ import Planet from '@/components/planet'
 
 export default {
   components: { Carousel3d, Slide, Planet },
-  firebase: {
-    planets: database.ref('planets')
+  firebase () {
+    return {
+      planets: {
+        source: database.ref('planets'),
+        readyCallback: () => this.$vs.loading.close()
+      }
+    }
   },
   data () {
     return {
       dialog: false
     }
   },
-  /*
   created () {
-    database.ref('planets').once('value', snapshot => {
-      snapshot.forEach(item => {
-        let planet = item.val()
-        if (planet.troop1) {
-          database.ref('troops').child(planet.troop1).once('value', snapshot => {
-            let troop = snapshot.val()
-            planet.troop1 = troop
-          })
-        }
-        if (planet.troop2) {
-          database.ref('troops').child(planet.troop2).once('value', snapshot => {
-            let troop = snapshot.val()
-            planet.troop2 = troop
-          })
-        }
-        this.planets.push(planet)
-      })
-    })
+    this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
-  */
   updated () {
     this.$refs.constellation && this.$refs.constellation.goSlide(this.$refs.constellation.currentIndex) // fixes invisible slide bug
   },
