@@ -7,6 +7,8 @@
     "element": "fire",
     "color": "danger",
     "attack": 50,
+    "magic": 30,
+    "dexterity": 90,
     "defense": 40,
     "life": 80
   },
@@ -18,6 +20,8 @@
     "element": "fire",
     "color": "danger",
     "attack": 50,
+    "magic": 30,
+    "dexterity": 90,
     "defense": 40,
     "life": 80
   },
@@ -29,6 +33,8 @@
     "element": "fire",
     "color": "danger",
     "attack": 50,
+    "magic": 30,
+    "dexterity": 90,
     "defense": 40,
     "life": 80
   },
@@ -40,6 +46,8 @@
     "element": "fire",
     "color": "danger",
     "attack": 50,
+    "magic": 30,
+    "dexterity": 90,
     "defense": 40,
     "life": 80
   },
@@ -51,6 +59,8 @@
     "element": "fire",
     "color": "danger",
     "attack": 50,
+    "magic": 30,
+    "dexterity": 90,
     "defense": 40,
     "life": 80
   },
@@ -62,6 +72,8 @@
     "element": "fire",
     "color": "danger",
     "attack": 50,
+    "magic": 30,
+    "dexterity": 90,
     "defense": 40,
     "life": 80
   }

@@ -10,8 +10,10 @@
         .element(v-tooltip="{ text: $t('ttp_ship_element') }")
           img(:src="getElementImage(ship.element)")
     vs-card-body.stats
+      vs-progress(:vs-percent="ship.magic", vs-color="primary", v-tooltip="{ text: $t('ttp_stats_magic') }")
       vs-progress(:vs-percent="ship.attack", vs-color="warning", v-tooltip="{ text: $t('ttp_stats_attack') }")
       vs-progress(:vs-percent="ship.defense", vs-color="dark", v-tooltip="{ text: $t('ttp_stats_defense') }")
+      vs-progress(:vs-percent="ship.dexterity", vs-color="success", v-tooltip="{ text: $t('ttp_stats_dexterity') }")
       vs-progress(:vs-percent="ship.life", vs-color="danger", v-tooltip="{ text: $t('ttp_stats_life') }")
 </template>
 
@@ -23,7 +25,7 @@ export default {
     getTypeImage (type) {
       switch (type) {
         case 'flying':
-          return 'https://image.flaticon.com/icons/svg/815/815882.svg'
+          return 'https://image.flaticon.com/icons/svg/981/981459.svg'
         case 'melee':
           return 'https://image.flaticon.com/icons/svg/499/499244.svg'
         case 'distance':
