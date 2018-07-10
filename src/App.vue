@@ -45,19 +45,32 @@ export default {
           color: 'primary',
           items: [
             { route: 'galaxy', name: 'ttl_route_galaxy', icon: 'check' },
-            { route: 'empire', name: 'ttl_route_empire', icon: 'check' },
+            { route: 'shop', name: 'ttl_route_shop', icon: 'check' }
+          ]
+        },
+        {
+          name: 'lbl_menu_interior',
+          color: 'primary',
+          items: [
             { route: 'army', name: 'ttl_route_army', icon: 'check' },
+            { route: 'empire', name: 'ttl_route_empire', icon: 'check' },
+            { route: 'fleet', name: 'ttl_route_fleet', icon: 'check' },
             { route: 'infrastructure', name: 'ttl_route_infrastructure', icon: 'check' },
-            { route: 'shop', name: 'ttl_route_shop', icon: 'check' },
-            { route: 'artifacts', name: 'ttl_route_artifacts', icon: 'check' },
-            { route: 'hangar', name: 'ttl_route_hangar', icon: 'check' },
-            { route: 'bestiary', name: 'ttl_route_bestiary', icon: 'check' },
             { route: 'tree', name: 'ttl_route_tree', icon: 'check' }
           ]
         },
         {
+          name: 'lbl_menu_help',
+          color: 'primary',
+          items: [
+            { route: 'artifacts', name: 'ttl_route_artifacts', icon: 'check' },
+            { route: 'ships', name: 'ttl_route_ships', icon: 'check' },
+            { route: 'troops', name: 'ttl_route_troops', icon: 'check' }
+          ]
+        },
+        {
           name: 'lbl_menu_account',
-          color: 'dark',
+          color: 'primary',
           items: [
             { route: 'login', name: 'ttl_route_login', icon: 'check' }
           ]
@@ -140,6 +153,9 @@ export default {
         padding 10px
       .dot-count.badgeNumber
         font-size 1rem
+    .vs-card
+      .card-titles
+        align-items center !important
     /* transitions */
     .fade-enter-active
     .fade-leave-active

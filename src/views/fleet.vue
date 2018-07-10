@@ -1,5 +1,5 @@
 <template lang="pug">
-  #hangar
+  #fleet
 
     // ships
     vs-row.ships
@@ -15,12 +15,12 @@
       vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
     
     // save
-    vs-dialog(vs-color="success", :vs-title="$t('ttl_hangar_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
-      p {{ $t('txt_hangar_save') }}
+    vs-dialog(vs-color="success", :vs-title="$t('ttl_fleet_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
+      p {{ $t('txt_fleet_save') }}
     
     // reset
-    vs-dialog(vs-color="danger", :vs-title="$t('ttl_hangar_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
-      p {{ $t('txt_hangar_reset') }}
+    vs-dialog(vs-color="danger", :vs-title="$t('ttl_fleet_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
+      p {{ $t('txt_fleet_reset') }}
 </template>
 
 <script>
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  #hangar
+  #fleet
     padding 5px
     height 100%
     display flex

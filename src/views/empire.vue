@@ -9,7 +9,6 @@
     
     // actions
     vs-row.actions
-      vs-button(vs-type="relief", vs-color="primary", vs-icon="check", @click="dialog = true") {{ $t('lbl_button_attack') }}
     
     // dialog
     vs-dialog(vs-color="danger", vs-title="ttl_dialog_attack", vs-type="confirm", @vs-accept="attack", :vs-active.sync="dialog")
