@@ -1,13 +1,11 @@
 <template lang="pug">
   #infrastructure
-
     // buildings
     vs-row.buildings
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-col.building(v-for="(building, index) in joined", :key="index", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="4", vs-xs="6")
           vs-avatar(:vs-src="building.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="building.quantity", v-tooltip="{ text: $t(building.tooltip) }")
           vs-button(:vs-color="building.color", vs-type="relief") {{ $t(building.name) }}
-    
     // actions
     vs-row.actions
       vs-button(vs-type="relief", vs-color="success", vs-icon="check") {{ $t('lbl_button_save') }}

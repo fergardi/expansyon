@@ -1,8 +1,7 @@
 <template lang="pug">
   #buildings
-
     // buildings
-    vs-row
+    vs-row.buildings
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-col(v-for="(building, index) in buildings", :key="index", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
           building(:building="building")

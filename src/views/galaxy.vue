@@ -1,12 +1,10 @@
 <template lang="pug">
   #galaxy
-
-    // galaxy
+    // planets
     vs-row.planets
       carousel-3d.constellation(:autoplay="false", :display="5", :count="planets.length", :border="0", :height="400", ref="constellation")
         slide.slide(v-for="(planet, index) in planets", :key="index", :index="index")
-          planet(:planet="planet")
-    
+          planet.animated.bounceIn(:planet="planet")
     // actions
     vs-row.actions
       vs-button(vs-type="relief", vs-color="primary", vs-icon="check", @click="confirm") {{ $t('lbl_button_attack') }}
@@ -43,9 +41,11 @@ export default {
       this.$vs.dialog({
         type: 'confirm',
         color: 'danger',
-        title: `Confirm`,
+        title: 'Confirm',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        accept: this.attack
+        accept: this.attack,
+        buttonAccept: 'relief',
+        buttonCancel: 'relief'
       })
     },
     attack () {

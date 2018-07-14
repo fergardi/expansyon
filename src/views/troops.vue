@@ -1,8 +1,7 @@
 <template lang="pug">
   #troops
-
     // troops
-    vs-row
+    vs-row.troops
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
         vs-col(v-for="(troop, index) in troops", :key="index", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
           troop(:troop="troop")

@@ -1,12 +1,10 @@
 <template lang="pug">
   #empire
-
-    // empire
+    // planets
     vs-row.planets
       carousel-3d.constellation(:autoplay="false", :display="5", :count="planets.length", :border="0", :height="400", ref="constellation")
         slide.slide(v-for="(planet, index) in planets", :key="index", :index="index")
-          planet(:planet="planet")
-    
+          planet.animated.bounceIn(:planet="planet")
     // actions
     vs-row.actions
 </template>

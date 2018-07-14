@@ -1,6 +1,5 @@
 <template lang="pug">
   #ships
-
     // ships
     vs-row
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
