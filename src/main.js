@@ -6,6 +6,8 @@ import VueFire from 'vuefire'
 import Vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css'
 import 'material-icons/iconfont/material-icons.css'
+import { auth } from '@/services/firebase'
+import store from '@/vuex'
 
 // uses
 Vue.use(Vuesax, {
@@ -30,6 +32,13 @@ const messages = {
 const i18n = new VueI18n({
   locale: 'es',
   messages
+})
+
+// login
+auth.onAuthStateChanged(status => {
+  if (auth.currentUser !== null) {
+    store.commit('uid', auth.currentUser.uid)
+  }
 })
 
 /* eslint-disable no-new */

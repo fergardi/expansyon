@@ -1,6 +1,5 @@
 <template lang="pug">
   #app
-    
     // topbar
     vs-topbar(vs-color="primary")
       i.material-icons(@click="sidebar = !sidebar") menu
@@ -18,13 +17,11 @@
             vs-chip(vs-color="primary", vs-icon="check") 1000 {{ $t('lbl_resource_mana') }}
           vs-dropdown-item
             vs-chip(vs-color="dark", vs-icon="check") 1000 {{ $t('lbl_resource_people') }}
-    
     // sidebar
     vs-sidebar(:vs-active.sync="sidebar")
       template(v-for="(block, index1) in menu")
         vs-divider(vs-position="center", :vs-color="block.color") {{ $t(block.name) }}
         vs-sidebar-item(v-for="(item, index2) in block.items", :key="`key${index1}${index2}`", @click.native="close", :to="item.route", :vs-active="active(item.route)", :vs-icon="item.icon", :vs-color="block.color") {{ $t(item.name) }}
-    
     // content
     #content
       transition(name="fade")
@@ -86,9 +83,6 @@ export default {
     },
     close () {
       this.sidebar = false
-    },
-    login () {
-      this.$router.push('/login')
     }
   },
   computed: {

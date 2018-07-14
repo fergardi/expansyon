@@ -6,7 +6,7 @@ Vue.use(Router)
 
 let router = new Router({
   routes: [
-    { path: '/', redirect: '/galaxy' },
+    { path: '/', redirect: '/login' },
     { path: '/login', name: 'ttl_route_login', component: () => import('@/views/login') },
     { path: '/galaxy', name: 'ttl_route_galaxy', component: () => import('@/views/galaxy') },
     { path: '/army', name: 'ttl_route_army', component: () => import('@/views/army') },
@@ -24,8 +24,18 @@ let router = new Router({
   ]
 })
 
+// security zone
+let accesible = [
+  'ttl_route_login'
+]
+
+// authentication
 router.beforeEach((to, from, next) => {
   store.commit('title', to.name)
+  if (!accesible.includes(to.name) && !store.state.uid) {
+    router.push({ path: '/login' })
+    return
+  }
   next()
 })
 

@@ -40,12 +40,13 @@ export default {
     confirm () {
       this.$vs.dialog({
         type: 'confirm',
-        color: 'danger',
+        color: 'primary',
         title: 'Confirm',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        accept: this.attack,
         buttonAccept: 'relief',
-        buttonCancel: 'relief'
+        buttonCancel: 'relief',
+        acceptText: this.$t('lbl_button_accept'),
+        cancelText: this.$t('lbl_button_cancel')
       })
     },
     attack () {
