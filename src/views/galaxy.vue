@@ -9,11 +9,7 @@
     
     // actions
     vs-row.actions
-      vs-button(vs-type="relief", vs-color="primary", vs-icon="check", @click="dialog = true") {{ $t('lbl_button_attack') }}
-    
-    // dialog
-    vs-dialog(vs-color="danger", vs-title="ttl_dialog_attack", vs-type="confirm", @vs-accept="attack", :vs-active.sync="dialog")
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      vs-button(vs-type="relief", vs-color="primary", vs-icon="check", @click="confirm") {{ $t('lbl_button_attack') }}
 </template>
 
 <script>
@@ -31,11 +27,6 @@ export default {
       }
     }
   },
-  data () {
-    return {
-      dialog: false
-    }
-  },
   created () {
     this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
@@ -48,6 +39,15 @@ export default {
     }
   },
   methods: {
+    confirm () {
+      this.$vs.dialog({
+        type: 'confirm',
+        color: 'danger',
+        title: `Confirm`,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        accept: this.attack
+      })
+    },
     attack () {
       this.$vs.notify({
         position: 'top-right',
@@ -56,7 +56,6 @@ export default {
         color: 'primary',
         icon: 'info'
       })
-      this.dialog = false
     }
   }
 }

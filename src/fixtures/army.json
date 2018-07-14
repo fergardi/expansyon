@@ -1,177 +1,23 @@
 {
   "dragon" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477161.svg",
-    "name" : "lbl_troop_dragon",
-    "tooltip" : "ttp_troop_dragon",
-    "color": "danger",
     "quantity": 10
   },
   "cerberus" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477177.svg",
-    "name" : "lbl_troop_cerberus",
-    "tooltip" : "ttp_troop_cerberus",
-    "color": "danger",
     "quantity": 10
   },
   "demon" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477191.svg",
-    "name" : "lbl_troop_demon",
-    "tooltip" : "ttp_troop_demon",
-    "color": "danger",
     "quantity": 10
   },
   "minotaur" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477188.svg",
-    "name" : "lbl_troop_minotaur",
-    "tooltip" : "ttp_troop_minotaur",
-    "color": "danger",
     "quantity": 10
   },
   "phoenix" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477193.svg",
-    "name" : "lbl_troop_phoenix",
-    "tooltip" : "ttp_troop_phoenix",
-    "color": "danger",
     "quantity": 10
   },
   "djinni" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477157.svg",
-    "name" : "lbl_troop_djinni",
-    "tooltip" : "ttp_troop_djinni",
-    "color": "primary",
     "quantity": 10
   },
   "gorgon" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477197.svg",
-    "name" : "lbl_troop_gorgon",
-    "tooltip" : "ttp_troop_gorgon",
-    "color": "primary",
-    "quantity": 10
-  },
-  "kraken" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477201.svg",
-    "name" : "lbl_troop_kraken",
-    "tooltip" : "ttp_troop_kraken",
-    "color": "primary",
-    "quantity": 10
-  },
-  "harpy" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477194.svg",
-    "name" : "lbl_troop_harpy",
-    "tooltip" : "ttp_troop_harpy",
-    "color": "primary",
-    "quantity": 10
-  },
-  "medusa" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477170.svg",
-    "name" : "lbl_troop_medusa",
-    "tooltip" : "ttp_troop_medusa",
-    "color": "primary",
-    "quantity": 10
-  },
-  "hydra" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477167.svg",
-    "name" : "lbl_troop_hydra",
-    "tooltip" : "ttp_troop_hydra",
-    "color": "success",
-    "quantity": 10
-  },
-  "elf" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477187.svg",
-    "name" : "lbl_troop_elf",
-    "tooltip" : "ttp_troop_elf",
-    "color": "success",
-    "quantity": 10
-  },
-  "centaur" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477202.svg",
-    "name" : "lbl_troop_centaur",
-    "tooltip" : "ttp_troop_centaur",
-    "color": "success",
-    "quantity": 10
-  },
-  "chimera" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477169.svg",
-    "name" : "lbl_troop_chimera",
-    "tooltip" : "ttp_troop_chimera",
-    "color": "success",
-    "quantity": 10
-  },
-  "satyr" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477186.svg",
-    "name" : "lbl_troop_satyr",
-    "tooltip" : "ttp_troop_satyr",
-    "color": "success",
-    "quantity": 10
-  },
-  "pegasus" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477165.svg",
-    "name" : "lbl_troop_pegasus",
-    "tooltip" : "ttp_troop_pegasus",
-    "color": "warning",
-    "quantity": 10
-  },
-  "valkyrie" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477181.svg",
-    "name" : "lbl_troop_valkyrie",
-    "tooltip" : "ttp_troop_valkyrie",
-    "color": "warning",
-    "quantity": 10
-  },
-  "gryphon" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477176.svg",
-    "name" : "lbl_troop_gryphon",
-    "tooltip" : "ttp_troop_gryphon",
-    "color": "warning",
-    "quantity": 10
-  },
-  "unicorn" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477153.svg",
-    "name" : "lbl_troop_unicorn",
-    "tooltip" : "ttp_troop_unicorn",
-    "color": "warning",
-    "quantity": 10
-  },
-  "mage" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477154.svg",
-    "name" : "lbl_troop_mage",
-    "tooltip" : "ttp_troop_mage",
-    "color": "warning",
-    "quantity": 10
-  },
-  "ent" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477178.svg",
-    "name" : "lbl_troop_ent",
-    "tooltip" : "ttp_troop_ent",
-    "color": "dark",
-    "quantity": 10
-  },
-  "werewolf" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477183.svg",
-    "name" : "lbl_troop_werewolf",
-    "tooltip" : "ttp_troop_werewolf",
-    "color": "dark",
-    "quantity": 10
-  },
-  "vampire" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477174.svg",
-    "name" : "lbl_troop_vampire",
-    "tooltip" : "ttp_troop_vampire",
-    "color": "dark",
-    "quantity": 10
-  },
-  "ghost" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477155.svg",
-    "name" : "lbl_troop_ghost",
-    "tooltip" : "ttp_troop_ghost",
-    "color": "dark",
-    "quantity": 10
-  },
-  "zombie" : {
-    "icon" : "https://image.flaticon.com/icons/svg/477/477162.svg",
-    "name" : "lbl_troop_zombie",
-    "tooltip" : "ttp_troop_zombie",
-    "color": "dark",
     "quantity": 10
   }
 }

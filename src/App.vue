@@ -54,6 +54,7 @@ export default {
           items: [
             { route: 'army', name: 'ttl_route_army', icon: 'check' },
             { route: 'empire', name: 'ttl_route_empire', icon: 'check' },
+            { route: 'museum', name: 'ttl_route_museum', icon: 'check' },
             { route: 'fleet', name: 'ttl_route_fleet', icon: 'check' },
             { route: 'infrastructure', name: 'ttl_route_infrastructure', icon: 'check' },
             { route: 'tree', name: 'ttl_route_tree', icon: 'check' }
@@ -65,7 +66,8 @@ export default {
           items: [
             { route: 'artifacts', name: 'ttl_route_artifacts', icon: 'check' },
             { route: 'ships', name: 'ttl_route_ships', icon: 'check' },
-            { route: 'troops', name: 'ttl_route_troops', icon: 'check' }
+            { route: 'troops', name: 'ttl_route_troops', icon: 'check' },
+            { route: 'buildings', name: 'ttl_route_buildings', icon: 'check' }
           ]
         },
         {

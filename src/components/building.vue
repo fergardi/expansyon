@@ -1,21 +1,21 @@
 <template lang="pug">
   
-  // artifact
-  vs-card.artifact(:vs-color="artifact.color")
-    vs-card-header(:vs-background-color="artifact.color", :vs-title="$t(artifact.name)", :vs-fill="true")
+  // building
+  vs-card.building(:vs-color="building.color")
+    vs-card-header(:vs-background-color="building.color", :vs-title="$t(building.name)", :vs-fill="true")
     vs-card-body.info
-      img(:src="artifact.icon")
+      img(:src="building.icon")
 </template>
 
 <script>
 export default {
-  name: 'artifact',
-  props: ['artifact']
+  name: 'building',
+  props: ['building']
 }
 </script>
 
 <style lang="stylus" scoped>
-  .artifact
+  .building
     background-color rgba(0,0,0,0.85)
     // background-image url('https://spaceplace.nasa.gov/review/interstellar/cover.sp.png')
     background-repeat no-repeat

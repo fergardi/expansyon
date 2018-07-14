@@ -10,6 +10,8 @@
   "ttl_route_artifacts": "Artefactos",
   "ttl_route_shop": "Tienda",
   "ttl_route_ships": "Naves",
+  "ttl_route_museum": "Museo",
+  "ttl_route_buildings": "Edificios",
 
   "lbl_menu_exterior": "Exterior",
   "lbl_menu_interior": "Interior",
@@ -19,8 +21,8 @@
   "lbl_button_attack": "Atacar",
   "lbl_button_save": "Guardar",
   "lbl_button_reset": "Reiniciar",
-  "lbl_button_login": "Ingreso",
-  "lbl_button_register": "Registro",
+  "lbl_button_login": "Acceder",
+  "lbl_button_register": "Registrar",
   "lbl_button_forgot": "Recordar",
   "lbl_button_buy": "Comprar",
 
@@ -60,6 +62,8 @@
   "txt_infrastructure_save": "Estás seguro de querer guardar estas estructuras?",
   "ttl_infrastructure_reset": "Reiniciar",
   "txt_infrastructure_reset": "Estás seguro de querer reiniciar estas estructuras?",
+
+  "lbl_building_mine": "Mina",
 
   "ttl_tree_save": "Guardar Habilidades",
   "txt_tree_save": "Estás seguro de querer guardar estas Habilidades?",

@@ -1,23 +1,23 @@
 <template lang="pug">
-  #ships
+  #buildings
 
-    // ships
+    // buildings
     vs-row
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
-        vs-col(v-for="(ship, index) in ships", :key="index", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
-          ship(:ship="ship")
+        vs-col(v-for="(building, index) in buildings", :key="index", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
+          building(:building="building")
 </template>
 
 <script>
 import { database } from '@/services/firebase'
-import Ship from '@/components/ship'
+import Building from '@/components/building'
 
 export default {
-  components: { Ship },
+  components: { Building },
   firebase () {
     return {
-      ships: {
-        source: database.ref('ships'),
+      buildings: {
+        source: database.ref('buildings'),
         readyCallback: () => { this.$vs.loading.close() }
       }
     }
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  #ships
+  #buildings
     padding 5px
     height 100%
 </style>

@@ -4,7 +4,7 @@
     // planet
     vs-row.planets
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
-        vs-col.planet(v-for="(planet, index1) in planets", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="12")
+        vs-col.planet(v-for="(planet, index1) in planets", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="4", vs-sm="6", vs-xs="12")
           planet(:planet="planet")
           vs-button(:vs-color="planet.color", vs-type="relief", key="button") {{ $t('lbl_button_buy') }}
     
@@ -100,6 +100,9 @@ export default {
         justify-content center
         align-items center
         flex-direction column
+    .planets
+      > div
+        justify-content center
 </style>
 
 <style lang="stylus">

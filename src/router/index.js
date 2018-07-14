@@ -17,6 +17,8 @@ let router = new Router({
     { path: '/ships', name: 'ttl_route_ships', component: () => import('@/views/ships') },
     { path: '/troops', name: 'ttl_route_troops', component: () => import('@/views/troops') },
     { path: '/artifacts', name: 'ttl_route_artifacts', component: () => import('@/views/artifacts') },
+    { path: '/buildings', name: 'ttl_route_buildings', component: () => import('@/views/buildings') },
+    { path: '/museum', name: 'ttl_route_museum', component: () => import('@/views/museum') },
     { path: '/tree', name: 'ttl_route_tree', component: () => import('@/views/tree') },
     { path: '*', redirect: '/' }
   ]

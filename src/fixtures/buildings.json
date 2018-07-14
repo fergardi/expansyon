@@ -1,53 +1,8 @@
 {
-  "level1" : {
+  "mine" : {
     "color" : "primary",
-    "buildings" : {
-      "building11" : {
-        "level" : 10,
-        "name" : "lbl_building_telescope",
-        "tooltip": "ttp_building_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      },
-      "building12" : {
-        "level" : 10,
-        "name" : "lbl_building_telescope",
-        "tooltip": "ttp_building_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      }
-    }
-  },
-  "level2" : {
-    "color" : "primary",
-    "buildings" : {
-      "building21" : {
-        "level" : 10,
-        "name" : "lbl_building_telescope",
-        "tooltip": "ttp_building_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      },
-      "building22" : {
-        "level" : 10,
-        "name" : "lbl_building_telescope",
-        "tooltip": "ttp_building_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      }
-    }
-  },
-  "level3" : {
-    "color" : "primary",
-    "buildings" : {
-      "building31" : {
-        "level" : 10,
-        "name" : "lbl_building_telescope",
-        "tooltip": "ttp_building_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      },
-      "building32" : {
-        "level" : 10,
-        "name" : "lbl_building_telescope",
-        "tooltip": "ttp_building_telescope",
-        "icon" : "https://image.flaticon.com/icons/svg/475/475854.svg"
-      }
-    }
+    "icon": "https://image.flaticon.com/icons/svg/763/763415.svg",
+    "name": "lbl_building_mine",
+    "tooltip" : "ttp_tooltip_mine"
   }
 }

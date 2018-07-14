@@ -4,22 +4,14 @@
     // troops
     vs-row.troops
       transition-group(name="animation", enter-active-class="animated bounceIn", leave-active-class="animated bounceOut", tag="div")
-        vs-col.troop(v-for="(troop, index1) in troops", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-w="4")
+        vs-col.troop(v-for="(troop, index1) in joined", :key="index1", vs-type="flex", vs-justify="center", vs-align="center", vs-lg="3", vs-sm="3", vs-xs="4")
           vs-avatar(:vs-src="troop.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="troop.quantity", v-tooltip="{ text: $t(troop.tooltip) }")
-          vs-button(:vs-color="troop.color", vs-type="relief", @click="increase(troop)") {{ $t(troop.name) }}
+          vs-button(:vs-color="troop.color", vs-type="relief") {{ $t(troop.name) }}
     
     // actions
     vs-row.actions
-      vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
-      vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
-    
-    // save
-    vs-dialog(vs-color="success", :vs-title="$t('ttl_army_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
-      p {{ $t('txt_army_save') }}
-    
-    // reset
-    vs-dialog(vs-color="danger", :vs-title="$t('ttl_army_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
-      p {{ $t('txt_army_reset') }}
+      vs-button(vs-type="relief", vs-color="success", vs-icon="check") {{ $t('lbl_button_save') }}
+      vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew") {{ $t('lbl_button_reset') }}
 </template>
 
 <script>
@@ -28,24 +20,32 @@ import { database } from '@/services/firebase'
 export default {
   firebase () {
     return {
-      troops: {
+      army: {
         source: database.ref('users').child('test').child('troops'),
-        readyCallback: () => { this.$vs.loading.close() }
+        readyCallback: () => this.queries++
+      },
+      troops: {
+        source: database.ref('troops'),
+        readyCallback: () => this.queries++
       }
+    }
+  },
+  watch: {
+    queries (num) {
+      if (num >= 2) this.$vs.loading.close()
     }
   },
   data () {
     return {
-      confirmSave: false,
-      confirmReset: false
+      queries: 0
     }
   },
   created () {
     this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
   },
-  methods: {
-    increase (troop) {
-      troop.quantity++
+  computed: {
+    joined () {
+      return this.army.map(a => Object.assign(a, this.troops.find(t => t['.key'] === a['.key'])))
     }
   }
 }
@@ -70,12 +70,12 @@ export default {
         flex-wrap wrap
         height 100%
         width 100%
-      .troop
-        padding 5px 0
-        display flex
-        justify-content center
-        align-items center
-        flex-direction column
+        .troop
+          padding 5px 0
+          display flex
+          justify-content center
+          align-items center
+          flex-direction column
     .actions
       height 15%
       display flex

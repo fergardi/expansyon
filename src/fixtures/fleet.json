@@ -1,0 +1,20 @@
+{
+  "fighter" : {
+    "quantity": 123
+  },
+  "cruiser" : {
+    "quantity": 123
+  },
+  "bomber" : {
+    "quantity": 123
+  },
+  "satellite" : {
+    "quantity": 123
+  },
+  "carrier" : {
+    "quantity": 123
+  },
+  "recycler" : {
+    "quantity": 123
+  }
+}

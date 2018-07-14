@@ -7,20 +7,12 @@
         vs-row.level(v-for="(level, index1) in tree", :key="index1")
           vs-col.skill(v-for="(skill, index2) in level.skills", :key="index2", vs-type="flex", vs-justify="center", vs-align="center", :vs-w="12 / level.size")
             vs-avatar(:vs-src="skill.icon", vs-size="80px", vs-color="rgba(0,0,0,0.8)", vs-badge-color="rgba(0,0,0,0.8)", :vs-badge="skill.level", v-tooltip="{ text: $t(skill.tooltip) }")
-            vs-button(:vs-color="level.color", vs-type="relief", @click="increase(skill)") {{ $t(skill.name) }}
+            vs-button(:vs-color="level.color", vs-type="relief") {{ $t(skill.name) }}
     
     // actions
     vs-row.actions
-      vs-button(vs-type="relief", vs-color="success", vs-icon="check", @click="confirmSave = true") {{ $t('lbl_button_save') }}
-      vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew", @click="confirmReset = true") {{ $t('lbl_button_reset') }}
-    
-    // save
-    vs-dialog(vs-color="success", :vs-title="$t('ttl_tree_save')", vs-type="confirm", @vs-accept="confirmSave = false", :vs-active.sync="confirmSave")
-      p {{ $t('txt_tree_save') }}
-    
-    // reset
-    vs-dialog(vs-color="danger", :vs-title="$t('ttl_tree_reset')", vs-type="confirm", @vs-accept="confirmReset = false", :vs-active.sync="confirmReset")
-      p {{ $t('txt_tree_reset') }}
+      vs-button(vs-type="relief", vs-color="success", vs-icon="check") {{ $t('lbl_button_save') }}
+      vs-button(vs-type="relief", vs-color="danger", vs-icon="autorenew") {{ $t('lbl_button_reset') }}
 </template>
 
 <script>
@@ -35,19 +27,8 @@ export default {
       }
     }
   },
-  data () {
-    return {
-      confirmSave: false,
-      confirmReset: false
-    }
-  },
   created () {
     this.$vs.loading({ background: 'rgba(0,0,0,0.8)' })
-  },
-  methods: {
-    increase (skill) {
-      skill.level++
-    }
   }
 }
 </script>
@@ -84,13 +65,4 @@ export default {
       display flex
       justify-content space-around
       align-items center
-</style>
-
-<style lang="stylus">
-  #tree
-    .skill
-      .con-img
-        padding 10px
-    .badgeNumber
-      font-size 1rem
 </style>

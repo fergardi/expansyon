@@ -9,10 +9,6 @@
     
     // actions
     vs-row.actions
-    
-    // dialog
-    vs-dialog(vs-color="danger", vs-title="ttl_dialog_attack", vs-type="confirm", @vs-accept="attack", :vs-active.sync="dialog")
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </template>
 
 <script>
@@ -44,18 +40,6 @@ export default {
   computed: {
     planet () {
       return this.$refs.constellation && this.planets ? this.planets[this.$refs.constellation.currentIndex] : null
-    }
-  },
-  methods: {
-    attack () {
-      this.$vs.notify({
-        position: 'top-right',
-        title: 'Titulo',
-        text: 'Lorem ipsum dolor sit amet, consectetur',
-        color: 'primary',
-        icon: 'info'
-      })
-      this.dialog = false
     }
   }
 }
